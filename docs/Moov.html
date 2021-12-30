@@ -28,7 +28,7 @@
 
 <header>
     
-        <h2><span class="attribs"><span class="type-signature"></span></span>Moov<span class="signature">(accountID, publicKey, secretKey, gotInstance<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>Moov<span class="signature">(credentials, gotInstance<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h2>
         
             <div class="class-description"><p>The Moov API client.</p></div>
         
@@ -45,7 +45,7 @@
     
 
     
-    <h4 class="name" id="Moov"><span class="type-signature"></span>new Moov<span class="signature">(accountID, publicKey, secretKey, gotInstance<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Moov"><span class="type-signature"></span>new Moov<span class="signature">(credentials, gotInstance<span class="signature-attributes">opt</span>)</span><span class="type-signature"></span></h4>
     
 
     
@@ -94,13 +94,13 @@ provide an instance of Got in the <code>gotInstance</code> parameter.</p>
 
         <tr>
             
-                <td class="name"><code>accountID</code></td>
+                <td class="name"><code>credentials</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">string</span>
+<span class="param-type">object</span>
 
 
             
@@ -114,6 +114,48 @@ provide an instance of Got in the <code>gotInstance</code> parameter.</p>
 
                 
                 </td>
+            
+
+            
+
+            <td class="description last"><p>API key credentials</p>
+                <h6>Properties</h6>
+                
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>accountID</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
             
 
             
@@ -138,14 +180,6 @@ provide an instance of Got in the <code>gotInstance</code> parameter.</p>
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
@@ -169,18 +203,40 @@ provide an instance of Got in the <code>gotInstance</code> parameter.</p>
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
             <td class="description last"><p>Secret key value from API key</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>domain</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>One of the domains from API key</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
         </tr>
 
     
@@ -297,6 +353,180 @@ provide an instance of Got in the <code>gotInstance</code> parameter.</p>
     
 
     
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="generateToken"><span class="type-signature">(async) </span>generateToken<span class="signature">(&hellip;scopes)</span><span class="type-signature"> &rarr; {Promise.&lt;<a href="global.html#Token">Token</a>>}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Generates an OAuth token required by Moov API requests. You only need call
+this function when generating tokens for Moov.js and Moov Drops. The other
+methods in this library generate tokens automatically.</p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>scopes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Scope</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                    &lt;repeatable><br>
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>One or more permissions to request</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Promise.&lt;<a href="global.html#Token">Token</a>></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+    <h5>Example</h5>
+    
+    <pre class="prettyprint"><code>const moov = new Moov(...);
+const token = await moov.generateToken(Scope.AccountsCreate, Scope.Ping);</code></pre>
+
+
+
+        
+    
 
     
 
@@ -311,13 +541,13 @@ provide an instance of Got in the <code>gotInstance</code> parameter.</p>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Moov.html">Moov</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="Moov.html">Moov</a></li></ul><h3>Global</h3><ul><li><a href="global.html#SCOPES">SCOPES</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Dec 30 2021 09:03:23 GMT-0600 (Central Standard Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Dec 30 2021 14:07:35 GMT-0600 (Central Standard Time)
 </footer>
 
 <script> prettyPrint(); </script>

@@ -28,7 +28,7 @@
         "lib/**/*"
     ],
     "scripts": {
-        "docs": "jsdoc -c ./jsdoc.json -d ./docs ./lib",
+        "docs": "jsdoc -c ./jsdoc.json -d ./docs -r ./lib",
         "docs-watch": "watch \"npm run docs\" ./lib",
         "docs-clean": "rm -rf ./docs",
         "test": "echo TBD",
