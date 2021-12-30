@@ -1,0 +1,40 @@
+{
+    "name": "@moovfinancial/node-sdk",
+    "version": "0.9.0",
+    "description": "Node SDK for the Moov API",
+    "main": "lib/index.js",
+    "type": "module",
+    "engines": {
+        "node": ">=14"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/moovfinancial/node-sdk"
+    },
+    "keywords": [
+        "nodejs",
+        "sdk"
+    ],
+    "author": {
+        "name": "Moov Financial",
+        "email": "support@moov.io"
+    },
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/moovfinancial/node-sdk/issues"
+    },
+    "homepage": "https://github.com/moovfinancial/node-sdk#readme",
+    "files": [
+        "lib/**/*"
+    ],
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "test": "echo TBD",
+        "publish": "npm publish --access public"
+    },
+    "devDependencies": {
+        "prettier": "^2.5.1",
+        "typescript": "^4.5.2"
+    }
+}
