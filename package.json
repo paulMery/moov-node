@@ -28,13 +28,19 @@
         "lib/**/*"
     ],
     "scripts": {
-        "build": "tsc",
-        "watch": "tsc --watch",
+        "docs": "jsdoc -c ./jsdoc.json -d ./docs ./lib",
+        "docs-watch": "watch \"npm run docs\" ./lib",
+        "docs-clean": "rm -rf ./docs",
         "test": "echo TBD",
         "publish": "npm publish --access public"
     },
     "devDependencies": {
+        "jsdoc": "^3.6.7",
         "prettier": "^2.5.1",
-        "typescript": "^4.5.2"
+        "typescript": "^4.5.2",
+        "watch": "^0.13.0"
+    },
+    "dependencies": {
+        "got": "^12.0.0"
     }
 }
