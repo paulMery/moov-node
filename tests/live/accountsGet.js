@@ -8,7 +8,7 @@ async function run() {
   const moov = new Moov(credentials, loggingGotOptions);
 
   try {
-    const account = await moov.accounts.retrieve(
+    const account = await moov.accounts.get(
       "d3216629-4317-424a-bac5-a2fae0c0c24e"
     );
   } catch (err) {

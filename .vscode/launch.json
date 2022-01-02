@@ -23,7 +23,7 @@
             "request": "launch",
             "name": "[live] accountsRetrieve",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/tests/live/accountsRetrieve.js"
+            "program": "${workspaceFolder}/tests/live/accountsGet.js"
         }
     ]
 }
