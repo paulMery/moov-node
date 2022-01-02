@@ -7,9 +7,23 @@
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "[live] Ping",
+            "name": "[live] ping",
             "skipFiles": ["<node_internals>/**"],
             "program": "${workspaceFolder}/tests/live/ping.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "[live] accountsList",
+            "skipFiles": ["<node_internals>/**"],
+            "program": "${workspaceFolder}/tests/live/accountsList.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "[live] accountsRetrieve",
+            "skipFiles": ["<node_internals>/**"],
+            "program": "${workspaceFolder}/tests/live/accountsRetrieve.js"
         }
     ]
 }
