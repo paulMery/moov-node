@@ -1,13 +1,47 @@
 # Node SDK for Moov API and Dashboard
 
 TBD
+
 ## Installation
 
 ```shell
 npm install @moovio/node
 ```
 
-## Examples
+## Usage
+
+Initialize the Moov client with your account ID and API key credentials. Get
+these from the Moov Dashboard.
+
+```javascript
+import { Moov } from "@moovio/node";
+
+const moov = new Moov({
+  accountID: "...",
+  publicKey: "...",
+  secretKey: "...",
+  domain: "...",
+});
+await moov.ping();
+```
+
+Generate OAuth tokens for Moov.js and Moov Drops using `Moov.generateToken()`.
+
+```javascript
+import { Moov, SCOPES } from "@moovio/node";
+
+const moov = new Moov({
+  accountID: "...",
+  publicKey: "...",
+  secretKey: "...",
+  domain: "...",
+});
+const token = await moov.generateToken([SCOPES.ACCOUNTS_CREATE]);
+```
+
+See the [`/examples`]() folder for more details.
+
+## Documentation
 
 TBD
 

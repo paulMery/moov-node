@@ -1,4 +1,13 @@
-export const loggingGotOptions = {
+/**
+ * Demonstrates how to access the Moov request-response pipeline by adding
+ * logging to requests and responses. See the [Got
+ * docs](https://github.com/sindresorhus/got) for more information.
+ *
+ * @example
+ * const moov = new Moov(credentials, gotOptionsForLogging);
+ * await moov.ping(); // <-- Logs request and response to console
+ */
+export const gotOptionsForLogging = {
   hooks: {
     beforeRequest: [
       (options) => {
