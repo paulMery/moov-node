@@ -1,8 +1,28 @@
 {
-    "plugins": ["plugins/markdown"],
+    "source": {
+        "include": [
+          "./lib"
+        ]
+    },
+    "opts": {
+        "debug": true,
+        "destination": "docs", 
+        "template": "clean-jsdoc-theme",
+        "theme_opts": {
+            "theme": "dark",
+            "title": "Node Library"
+        },
+        "readme": "./README.md"
+    },
+    "plugins": [
+        "plugins/markdown"
+    ],
     "templates": {
         "default": {
             "outputSourceFiles": false
         }
+    },
+    "markdown": {
+        
     }
 }

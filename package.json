@@ -3,7 +3,6 @@
     "version": "0.1.1",
     "description": "Node SDK for the Moov API and Dashboard",
     "main": "lib/index.js",
-    "type": "module",
     "engines": {
         "node": ">=14"
     },
@@ -28,7 +27,9 @@
         "lib/**/*"
     ],
     "scripts": {
-        "docs": "jsdoc -c ./jsdoc.json -d ./docs -r ./lib",
+        "docs": "jsdoc -c ./jsdoc.json",
+        "markdown": "jsdoc2md -t README.hbs lib/*.js > markdown/index.md",
+        "markdownjs": "node generate-docs.js",
         "docs-watch": "watch \"npm run docs\" ./lib",
         "docs-clean": "rm -rf ./docs",
         "test": "ava ./lib/**/*.test.js",
@@ -38,11 +39,15 @@
     "devDependencies": {
         "ava": "^4.0.0",
         "jsdoc": "^3.6.7",
+        "jsdoc-to-markdown": "^7.1.0",
         "prettier": "^2.5.1",
+        "typedoc": "^0.22.10",
+        "typedoc-plugin-markdown": "^3.11.9",
         "typescript": "^4.5.2",
         "watch": "^0.13.0"
     },
     "dependencies": {
+        "clean-jsdoc-theme": "^3.3.1",
         "got": "^12.0.0"
     }
 }
