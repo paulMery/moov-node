@@ -7,11 +7,6 @@
     "opts": {
         "debug": true,
         "destination": "docs", 
-        "template": "clean-jsdoc-theme",
-        "theme_opts": {
-            "theme": "dark",
-            "title": "Node Library"
-        },
         "readme": "./README.md"
     },
     "plugins": [
