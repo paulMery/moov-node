@@ -16,7 +16,7 @@ async function run() {
   // Create a new account
   const account = await moov.accounts.create({
     accountType: "business",
-    displayName: "Test Business 01 (from Node SDK)",
+    displayName: "Test Business (from Node SDK)",
     profile: {
       business: {
         businessType: "llc",
