@@ -170,6 +170,16 @@
 | --- | --- | --- |
 | cardPayment | [<code>CardPaymentSettings</code>](#CardPaymentSettings) | <p>Card payment settings (business only)</p> |
 
+<a name="Profile"></a>
+
+## Profile
+**Properties**
+
+| Name | Type |
+| --- | --- |
+| [business] | [<code>BusinessProfile</code>](#BusinessProfile) | 
+| [individual] | [<code>IndividualProfile</code>](#IndividualProfile) | 
+
 <a name="Account"></a>
 
 ## Account
@@ -181,7 +191,7 @@
 | accountID | <code>string</code> | <p>Account identifier</p> |
 | accountType | <code>&quot;individual&quot;</code> \| <code>&quot;business&quot;</code> | <p>Type of entity represented by this account</p> |
 | displayName | <code>string</code> | <p>Name of individual or business</p> |
-| profile | [<code>IndividualProfile</code>](#IndividualProfile) \| [<code>BusinessProfile</code>](#BusinessProfile) | <p>Details for individual or business</p> |
+| profile | [<code>Profile</code>](#Profile) | <p>Details for individual or business</p> |
 | metadata | <code>object</code> | <p>Arbitrary key-value pairs</p> |
 | foreignID | <code>string</code> | <p>Optional identification or alias</p> |
 | customerSupport | [<code>CustomerSupport</code>](#CustomerSupport) \| <code>null</code> | <p>Displayed on credit card transactions (business only)</p> |

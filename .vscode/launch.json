@@ -16,21 +16,14 @@
             "request": "launch",
             "name": "[live] ping",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/tests/live/ping.js"
+            "program": "${workspaceFolder}/examples/ping.js"
         },
         {
             "type": "pwa-node",
             "request": "launch",
-            "name": "[live] accountsList",
+            "name": "[live] createAndUpdateAccount",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/tests/live/accountsList.js"
-        },
-        {
-            "type": "pwa-node",
-            "request": "launch",
-            "name": "[live] accountsGet",
-            "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/tests/live/accountsGet.js"
+            "program": "${workspaceFolder}/examples/createAndUpdateAccount.js"
         }
     ]
 }

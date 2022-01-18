@@ -34,9 +34,6 @@ for (let topic of Object.keys(FILES)) {
     files: FILES[topic],
     configure: "./jsdoc.json",
   });
-  if (topic === "Moov") {
-    console.log(templateData);
-  }
 
   // Clean up the data for our docs
   for (let item of templateData) {
