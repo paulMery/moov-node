@@ -1,6 +1,0 @@
-{
-    "files": "./lib/*.js",
-    "template": "./docs/templates/template.hbs",
-    "partial": "./docs/partials/*.hbs",
-    "example-lang": "js"
-}

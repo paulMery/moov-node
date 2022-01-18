@@ -7,6 +7,13 @@
         {
             "type": "pwa-node",
             "request": "launch",
+            "name": "generateDocs",
+            "skipFiles": ["<node_internals>/**"],
+            "program": "${workspaceFolder}/scripts/generateDocs.cjs"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
             "name": "[live] ping",
             "skipFiles": ["<node_internals>/**"],
             "program": "${workspaceFolder}/tests/live/ping.js"

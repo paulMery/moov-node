@@ -1,29 +1,45 @@
-## Typedefs
 
-<dl>
-<dt><a href="#Phone">Phone</a></dt>
-<dd></dd>
-<dt><a href="#Address">Address</a></dt>
-<dd></dd>
-<dt><a href="#IndividualProfile">IndividualProfile</a></dt>
-<dd></dd>
-<dt><a href="#Responsibility">Responsibility</a></dt>
-<dd></dd>
-<dt><a href="#Representative">Representative</a></dt>
-<dd></dd>
-<dt><a href="#IndustryCodes">IndustryCodes</a></dt>
-<dd></dd>
-<dt><a href="#BusinessProfile">BusinessProfile</a></dt>
-<dd></dd>
-<dt><a href="#CustomerSupport">CustomerSupport</a></dt>
-<dd></dd>
-<dt><a href="#CardPaymentSettings">CardPaymentSettings</a></dt>
-<dd></dd>
-<dt><a href="#AccountSettings">AccountSettings</a></dt>
-<dd></dd>
-<dt><a href="#Account">Account</a></dt>
-<dd></dd>
-</dl>
+
+<a name="Accounts+create"></a>
+
+## Accounts.create(account) ⇒ [<code>Promise.&lt;Account&gt;</code>](#Account)
+<p>Create a new connected account.</p>
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| account | [<code>Account</code>](#Account) | <p>New account details</p> |
+
+<a name="Accounts+get"></a>
+
+## Accounts.get(connectedAccountID) ⇒ [<code>Promise.&lt;Account&gt;</code>](#Account)
+<p>Retrieves details for the account with the specified ID.</p>
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| connectedAccountID | <code>string</code> | <p>Account to query</p> |
+
+<a name="Accounts+update"></a>
+
+## Accounts.update(account) ⇒ [<code>Promise.&lt;Account&gt;</code>](#Account)
+<p>Updates an existing account. Requires a complete Account object.</p>
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| account | [<code>Account</code>](#Account) | <p>Account to update</p> |
+
+<a name="Accounts+patch"></a>
+
+## Accounts.patch(account) ⇒ [<code>Promise.&lt;Account&gt;</code>](#Account)
+<p>Updates an existing account. Does not require a complete Account object.</p>
+
+
+| Param | Type | Description |
+| --- | --- | --- |
+| account | [<code>Account</code>](#Account) | <p>Account to update</p> |
+
 
 <a name="Phone"></a>
 
@@ -113,7 +129,7 @@
 | --- | --- | --- |
 | legalBusinessName} | <code>string</code> |  |
 | doingBusinessAs | <code>string</code> |  |
-| businessType | <code>&quot;soleProprietorship&quot;</code> \| <code>&quot;unincorporatedAssociation&quot;</code> \| <code>&quot;trust&quot;</code> \| <code>&quot;publicCorporation&quot;</code> \| <code>&quot;privateCorporation&quot;</code> \| <code>&quot;privateCorporation&quot;</code> \| <code>&quot;llc&quot;</code> \| <code>&quot;partnership&quot;</code> \| <code>&quot;unincorporatedNonProfit&quot;</code> \| <code>&quot;incorporatedNonProfit&quot;</code> | <ul> <li></li> </ul> |
+| businessType | <code>&quot;soleProprietorship&quot;</code> \| <code>&quot;unincorporatedAssociation&quot;</code> \| <code>&quot;trust&quot;</code> \| <code>&quot;publicCorporation&quot;</code> \| <code>&quot;privateCorporation&quot;</code> \| <code>&quot;privateCorporation&quot;</code> \| <code>&quot;llc&quot;</code> \| <code>&quot;partnership&quot;</code> \| <code>&quot;unincorporatedNonProfit&quot;</code> \| <code>&quot;incorporatedNonProfit&quot;</code> |  |
 | address | [<code>Address</code>](#Address) |  |
 | phone | [<code>Phone</code>](#Phone) |  |
 | email | <code>string</code> |  |
