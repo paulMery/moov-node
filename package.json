@@ -28,7 +28,7 @@
         "lib/**/*"
     ],
     "scripts": {
-        "docs": "jsdoc2md > ./docs/output/docs.md",
+        "docs": "node ./scripts/generateDocs.cjs",
         "docs-watch": "watch \"npm run docs\" ./lib",
         "docs-clean": "rm ./docs/output/*.*",
         "test": "ava ./lib/**/*.test.js",
