@@ -1,8 +1,6 @@
 {
     "plugins": ["plugins/markdown"],
-    "templates": {
-        "default": {
-            "outputSourceFiles": false
-        }
+    "source": {
+        "include": ["./lib/moov.js", "./lib/accounts.js"]
     }
 }

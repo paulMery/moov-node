@@ -28,7 +28,8 @@
         "lib/**/*"
     ],
     "scripts": {
-        "docs": "node ./scripts/generateDocs.cjs",
+        "jsdocs": "jsdoc --explain -c ./jsdoc.json > ./docs/build/docs.json",
+        "docs": "npm run jsdocs && node ./scripts/generateDocs.cjs",
         "docs-watch": "watch \"npm run docs\" ./lib",
         "docs-clean": "rm ./docs/output/*.*",
         "test": "ava ./lib/**/*.test.js",
@@ -37,8 +38,9 @@
     },
     "devDependencies": {
         "ava": "^4.0.0",
+        "handlebars": "^4.7.7",
         "jsdoc": "^3.6.7",
-        "jsdoc-to-markdown": "^7.1.0",
+        "lodash": "^4.17.21",
         "prettier": "^2.5.1",
         "typescript": "^4.5.2",
         "watch": "^0.13.0"
