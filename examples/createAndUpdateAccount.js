@@ -25,7 +25,6 @@ async function run() {
       },
     },
   });
-  console.log(account);
 
   // Update - requires a complete account object
   account.profile.business.phone = { number: "555-555-5555" };

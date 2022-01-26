@@ -137,7 +137,6 @@ function parseData(jsdocsData) {
         members,
       });
     }
-    console.dir(docData[tag].enums, { depth: 4 });
 
     // Types and their properties
     docData[tag].types = _.remove(idents, (x) => x.kind === "typedef");
@@ -211,12 +210,13 @@ function writeDataToTemplates(data) {
     const apiDocs = {
       apiDocs: apiTemplate(data[tag]),
     };
+    console.log(apiDocs.apiDocs.slice(400));
 
     // Look for a template for this specific tag
     let tagContent = "{{apiDocs}}";
     try {
       tagContent = fs.readFileSync(
-        path.join(TAG_TEMPLATE_PATH, `${tag}.bhs`),
+        path.join(TAG_TEMPLATE_PATH, `${tag}.hbs`),
         "utf-8"
       );
     } catch {
