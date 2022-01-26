@@ -1,8 +1,9 @@
 {
     "name": "@moovio/node",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Node SDK for the Moov API and Dashboard",
     "main": "lib/index.js",
+    "types": "lib/types/index.d.ts",
     "type": "module",
     "engines": {
         "node": ">=14"
@@ -32,6 +33,7 @@
         "docs-watch": "watch \"npm run docs\" ./docs/templates",
         "docs-clean": "rm ./docs/output/*.*",
         "test": "ava ./lib/**/*.test.js",
+        "generate-types": "tsc",
         "test-watch": "ava --watch ./lib/**/*.test.js",
         "publish": "npm publish --access public"
     },
@@ -41,7 +43,7 @@
         "jsdoc": "^3.6.7",
         "lodash": "^4.17.21",
         "prettier": "^2.5.1",
-        "typescript": "^4.5.2",
+        "typescript": "^4.5.5",
         "watch": "^0.13.0"
     },
     "dependencies": {
