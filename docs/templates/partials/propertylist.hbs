@@ -1,0 +1,9 @@
+{{#if properties}}
+**Properties**
+
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+{{#each properties}}
+| {{name}} | `{{joinTypes type.names}}` | {{description}} |
+{{/each}}
+{{/if}}

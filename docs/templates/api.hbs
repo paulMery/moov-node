@@ -1,11 +1,15 @@
-{{#classes}}
-  {{name}}
-  Functions:
-    {{#functions}}
-      {{name}}
-    {{/functions}}
-  Members:
-    {{#members}}
-      {{name}}
-    {{/members}}
-{{/classes}}
+{{#each classes}}
+  {{>class}}
+{{/each}}
+
+{{#each functions}}
+  {{>function}}
+{{/each}}
+
+{{#each types}}
+  {{>type}}
+{{/each}}
+
+{{#each enums}}
+  {{>enumlist}}
+{{/each}}

@@ -1,5 +1,4 @@
 {
-    "plugins": ["plugins/markdown"],
     "source": {
         "include": ["./lib/moov.js", "./lib/accounts.js"]
     }

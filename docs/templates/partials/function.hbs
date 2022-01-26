@@ -1,0 +1,25 @@
+## {{#if (isConstructor .)~}}new {{else}}{{~#unless (isGlobal .)~}}{{memberof}}.{{~/unless~}}{{/if~}}
+
+{{~name~}}
+{{~#if this.params~}}
+  (
+  {{~#each params~}}
+    {{~#if (isTopLevelParam name)}}
+      {{~name~}}
+      {{~#unless @last~}}, {{/unless~}}
+    {{~/if~}}
+  {{~/each~}}
+  )
+{{else}}
+()
+{{~/if}}
+
+{{summaryOrDescription .}}
+
+{{>paramlist}}
+
+{{>returnlist}}
+
+{{descriptionIfSummary .}}
+
+{{>examples}}

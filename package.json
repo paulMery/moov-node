@@ -28,9 +28,8 @@
         "lib/**/*"
     ],
     "scripts": {
-        "jsdocs": "jsdoc --explain -c ./jsdoc.json > ./docs/build/docs.json",
-        "docs": "npm run jsdocs && node ./scripts/generateDocs.cjs",
-        "docs-watch": "watch \"npm run docs\" ./lib",
+        "docs": "node ./scripts/generateDocs.cjs",
+        "docs-watch": "watch \"npm run docs\" ./docs/templates",
         "docs-clean": "rm ./docs/output/*.*",
         "test": "ava ./lib/**/*.test.js",
         "test-watch": "ava --watch ./lib/**/*.test.js",
