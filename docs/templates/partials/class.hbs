@@ -1,0 +1,15 @@
+## Class {{name}}
+
+{{identifier.classdesc}}
+
+{{#if constructor}}
+  {{~>function constructor}}
+{{/if}}
+
+{{#each functions}}
+  {{~>function}}
+{{/each}}
+
+{{#each members}}
+  {{~>member}}
+{{/each}}

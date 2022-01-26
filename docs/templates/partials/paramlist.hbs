@@ -1,0 +1,9 @@
+{{#if params}}
+**Parameters**
+
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+{{#each params}}
+| {{name}} | `{{joinTypes type.names}}` | {{description}} |
+{{/each}}
+{{/if}}
