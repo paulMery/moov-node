@@ -210,7 +210,6 @@ function writeDataToTemplates(data) {
     const apiDocs = {
       apiDocs: apiTemplate(data[tag]),
     };
-    console.log(apiDocs.apiDocs.slice(400));
 
     // Look for a template for this specific tag
     let tagContent = "{{apiDocs}}";

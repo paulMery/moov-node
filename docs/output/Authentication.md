@@ -29,6 +29,8 @@ const token = await moov.generateToken([
   SCOPES.PING
 ]);
 ```
+
+
 ## Type: Token
 
 OAuth2 token returned by `Moov.generateToken()`. Use `Token.token` in Moov.js
