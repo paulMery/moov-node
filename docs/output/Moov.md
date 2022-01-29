@@ -72,6 +72,23 @@ try {
 } catch (err) {
   // ...
 }
+```## Moov.transfers
+
+Gets the Transfers API.
+
+**Type**: `Transfers`
+
+ 
+
+**Examples**
+
+```javascript
+const moov = new Moov(...);
+try {
+  await moov.transfers.create(...);
+} catch (err) {
+  // ...
+}
 ```
 
 

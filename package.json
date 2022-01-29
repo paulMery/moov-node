@@ -34,8 +34,7 @@
         "docs-clean": "rm ./docs/output/*.*",
         "test": "ava ./lib/**/*.test.js",
         "generate-types": "tsc",
-        "test-watch": "ava --watch ./lib/**/*.test.js",
-        "publish": "npm publish --access public"
+        "test-watch": "ava --watch ./lib/**/*.test.js"
     },
     "devDependencies": {
         "ava": "^4.0.0",
