@@ -9,7 +9,7 @@ weight: 10
 Initializes a new instance of the Moov API client.
 
 ```javascript
-new Moov(credentials, gotOptionsOrInstance)
+new Moov(credentials, )
 ```
 
 **Parameters**
@@ -21,7 +21,6 @@ new Moov(credentials, gotOptionsOrInstance)
 | credentials.publicKey | `string` | Public key value from API key |
 | credentials.secretKey | `string` | Secret key value from API key |
 | credentials.domain | `string` | One of the domains from API key |
-| gotOptionsOrInstance | `object` | Customized Got options or instance. See [docs](https://github.com/sindresorhus/got). |
 
 
 
@@ -32,7 +31,7 @@ Dashboard.
 Moov uses the [Got](https://github.com/sindresorhus/got) HTTP client
 library. If you need to access or customize the request-response pipeline,
 then provide customized options or an instance in the
-`gotOptionsOrInstance` parameter.
+as an optional second parameter.
 
 **Examples**
 
@@ -44,31 +43,8 @@ const moov = new Moov({
   domain: "...",
 });
 ```
-### Ping
 
 
-Pings the Moov servers to check for connectivity.
-See https://docs.moov.io/api.
-
-```javascript
-moov.ping()
-```
-
-
-
-
-
-**Examples**
-
-```javascript
-const moov = new Moov(...);
-try {
-  await moov.ping();
-  // Ping succeeded
-} catch (err) {
-  // Ping failed
-}
-```
 ### Accounts
 
 ```javascript
@@ -91,6 +67,7 @@ try {
   // ...
 }
 ```
+
 
 
 

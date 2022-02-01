@@ -27,6 +27,7 @@ accounts.create(account)
 
 
 
+
 ### Get
 
 
@@ -50,6 +51,7 @@ accounts.get(connectedAccountID)
 
 
 
+
 ### Update
 
 
@@ -70,6 +72,7 @@ accounts.update(account)
 **Returns**
 
 `Promise.<Account>`
+
 
 
 
@@ -101,6 +104,7 @@ accounts.patch(account)
 
 
 
+
 ## Types
 #### Phone
 
@@ -124,6 +128,7 @@ accounts.patch(account)
 ```
   {{</ tab>}}
 {{</ tabs>}}
+
 
 
 
@@ -162,6 +167,7 @@ accounts.patch(account)
 
 
 
+
 #### IndividualProfile
 
 Describes the individual associated with a non-business account.
@@ -196,6 +202,7 @@ Describes the individual associated with a non-business account.
 
 
 
+
 #### Responsibility
 
 Describes the responsibilities associated with a business representative.
@@ -222,6 +229,7 @@ Describes the responsibilities associated with a business representative.
 ```
   {{</ tab>}}
 {{</ tabs>}}
+
 
 
 
@@ -268,6 +276,7 @@ Describes an individual who represents a business account.
 
 
 
+
 #### IndustryCodes
 
 Standard industry codes for businesses.
@@ -292,6 +301,7 @@ Standard industry codes for businesses.
 ```
   {{</ tab>}}
 {{</ tabs>}}
+
 
 
 
@@ -342,6 +352,7 @@ Describes a business account.
 
 
 
+
 #### CustomerSupport
 
 Describes customer support contact information for a business account.
@@ -372,6 +383,7 @@ Describes customer support contact information for a business account.
 
 
 
+
 #### CardPaymentSettings
 
 
@@ -392,6 +404,7 @@ Describes customer support contact information for a business account.
 ```
   {{</ tab>}}
 {{</ tabs>}}
+
 
 
 
@@ -420,6 +433,7 @@ Describes customer support contact information for a business account.
 
 
 
+
 #### Profile
 
 Profile for a Moov acocunt. May be business or individual.
@@ -442,6 +456,7 @@ Profile for a Moov acocunt. May be business or individual.
 ```
   {{</ tab>}}
 {{</ tabs>}}
+
 
 
 
@@ -486,6 +501,7 @@ Describes a Moov account associated with an individual or a business.
 ```
   {{</ tab>}}
 {{</ tabs>}}
+
 
 
 

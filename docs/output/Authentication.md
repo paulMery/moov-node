@@ -40,6 +40,32 @@ const token = await moov.generateToken([
   SCOPES.PING
 ]);
 ```
+### Ping
+
+
+Pings the Moov servers to check for connectivity.
+See https://docs.moov.io/api.
+
+```javascript
+moov.ping()
+```
+
+
+
+
+
+**Examples**
+
+```javascript
+const moov = new Moov(...);
+try {
+  await moov.ping();
+  // Ping succeeded
+} catch (err) {
+  // Ping failed
+}
+```
+
 ## Types
 #### Token
 
@@ -66,6 +92,7 @@ and client-side code to make calls to the Moov API.
 ```
   {{</ tab>}}
 {{</ tabs>}}
+
 
 
 
