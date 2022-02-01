@@ -5,6 +5,7 @@ const path = require("path");
 const handlebars = require("handlebars");
 const _ = require("lodash");
 const { inspect } = require("util");
+const menuOrder = require("./menuOrder.cjs");
 
 const API_TEMPLATE_FILE = "./docs/templates/api.hbs";
 const PARTIALS_PATH = "./docs/templates/partials";
@@ -79,7 +80,15 @@ function parseData(jsdocsData) {
   const docData = {};
   for (let tag of Object.keys(jsdocDataByTag)) {
     const idents = jsdocDataByTag[tag];
-    docData[tag] = {};
+
+    // Get weight to ensure proper order of
+    const tagIndex = menuOrder.indexOf(tag);
+    const weight = (tagIndex + 1) * 10;
+
+    docData[tag] = {
+      name: tag,
+      weight
+    };
 
     // Classes and their members
     docData[tag].classes = [];
@@ -210,7 +219,7 @@ function writeDataToTemplates(data) {
     const apiDocs = {
       apiDocs: apiTemplate(data[tag]),
     };
-    console.log(apiDocs.apiDocs.slice(400));
+    // console.log(apiDocs.apiDocs.slice(400));
 
     // Look for a template for this specific tag
     let tagContent = "{{apiDocs}}";

@@ -1,4 +1,7 @@
-This is a tag-specific template for the Authentication tag. You can put anything you like above the injected API docs...
+---
+title: "Authentication"
+weight: 20
+---
 
 
 ## Moov.generateToken(scopes, accountID)
@@ -58,6 +61,3 @@ Available scopes to request on OAuth tokens.
 | PROFILE_WRITE | Write account information |
 | PING | Ping Moov servers to test for connectivity |
 
-
-
-...and anything below it.

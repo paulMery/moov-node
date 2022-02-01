@@ -1,3 +1,8 @@
+---
+title: "Accounts"
+weight: 30
+---
+
 ## Class Accounts
 
 The Accounts API.

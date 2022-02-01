@@ -1,3 +1,8 @@
+---
+title: "Moov"
+weight: 10
+---
+
 ## Class Moov
 
 The Moov API client.
