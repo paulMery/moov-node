@@ -3,10 +3,6 @@ title: "Accounts"
 weight: 30
 ---
 
-### Accounts
-
-The Accounts API.
-
 
 ### Create
 

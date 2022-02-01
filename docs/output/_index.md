@@ -5,10 +5,6 @@ weight: 10
 
 ### Moov
 
-The Moov API client.
-
-### Moov
-
 
 Initializes a new instance of the Moov API client.
 
@@ -73,11 +69,15 @@ try {
   // Ping failed
 }
 ```
-#### Moov.accounts
+### Accounts
+
+```javascript
+moov.accounts
+```
+
+More on [accounts](accounts).
 
 Gets the Accounts API.
-
-**Type**: `Accounts`
 
  
 
