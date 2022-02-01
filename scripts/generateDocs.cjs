@@ -225,7 +225,10 @@ function writeDataToTemplates(data) {
     const tagTemplate = handlebars.compile(tagContent, { noEscape: true });
 
     // Write the final file
-    const outputPath = path.join(OUTPUT_PATH, `${tag}.md`);
+    let filename =  tag; 
+    // Rename Moov tag to index;
+    if(tag === 'Moov')filename = '_index';
+    const outputPath = path.join(OUTPUT_PATH, `${filename}.md`);
     try {
       fs.writeFileSync(outputPath, tagTemplate(apiDocs));
     } catch (err) {
