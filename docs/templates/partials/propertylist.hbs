@@ -1,9 +1,23 @@
 {{#if properties}}
 **Properties**
 
+\{{< tabs >}}
+  \{{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 {{#each properties}}
 | {{name}} | `{{joinTypes type.names}}` | {{description}} |
 {{/each}}
+  \{{< /tab >}}
+  \{{< tab title="JSON">}}
+```json
+{ 
+{{#each properties}}
+  "{{name}}": "{{joinTypes type.names}}"{{#if @last}}{{else}},{{/if}}
+{{/each}}
+}
+```
+  \{{</ tab>}}
+\{{</ tabs>}}
+
 {{/if}}

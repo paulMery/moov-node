@@ -3,14 +3,19 @@ title: "Accounts"
 weight: 30
 ---
 
-## Class Accounts
+### Accounts
 
 The Accounts API.
 
 
-## Accounts.create(account)
+### Create
+
 
 Create a new connected account.
+
+```javascript
+accounts.create(account)
+```
 
 **Parameters**
 
@@ -18,15 +23,22 @@ Create a new connected account.
 | ---- | ---- | ----------- |
 | account | `Account` | New account details |
 
+
+
 **Returns**
 
 `Promise.<Account>`
 
 
 
-## Accounts.get(connectedAccountID)
+### Get
+
 
 Retrieves details for the account with the specified ID.
+
+```javascript
+accounts.get(connectedAccountID)
+```
 
 **Parameters**
 
@@ -34,15 +46,22 @@ Retrieves details for the account with the specified ID.
 | ---- | ---- | ----------- |
 | connectedAccountID | `string` | Account to query |
 
+
+
 **Returns**
 
 `Promise.<Account>`
 
 
 
-## Accounts.update(account)
+### Update
+
 
 Updates an existing account. Requires a complete Account object.
+
+```javascript
+accounts.update(account)
+```
 
 **Parameters**
 
@@ -50,22 +69,31 @@ Updates an existing account. Requires a complete Account object.
 | ---- | ---- | ----------- |
 | account | `Account` | Account to update |
 
+
+
 **Returns**
 
 `Promise.<Account>`
 
 
 
-## Accounts.patch(account)
+### Patch
+
 
 Updates an existing account. Does not require a complete Account object,
 but the `accountID` property is required.
 
+```javascript
+accounts.patch(account)
+```
+
 **Parameters**
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | account | `Account` | Account to update |
+
+
 
 **Returns**
 
@@ -76,25 +104,42 @@ but the `accountID` property is required.
 
 
 
-## Type: Phone
+
+## Types
+#### Phone
 
 
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | number | `string` | Phone number |
 | countryCode | `string` | 1 digit country code |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "number": "string",
+  "countryCode": "string"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
-## Type: Address
+
+#### Address
 
 
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | addressLine1 | `string` |  |
@@ -103,15 +148,32 @@ but the `accountID` property is required.
 | stateOrProvince | `string` | 2 characters |
 | postalCode | `string` | 5 characters |
 | country | `string` | 2 characters |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "addressLine1": "string",
+  "addressLine2": "string",
+  "city": "string",
+  "stateOrProvince": "string",
+  "postalCode": "string",
+  "country": "string"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
-## Type: IndividualProfile
+
+#### IndividualProfile
 
 Describes the individual associated with a non-business account.
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | name | `string` |  |
@@ -120,30 +182,62 @@ Describes the individual associated with a non-business account.
 | address | `Address` |  |
 | birthDateProvided | `boolean` | True if individual's birthdate has been provided |
 | governmentIDProvided | `boolean` | True if individual's government-issued ID has been provided |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "name": "string",
+  "phone": "Phone",
+  "email": "string",
+  "address": "Address",
+  "birthDateProvided": "boolean",
+  "governmentIDProvided": "boolean"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
-## Type: Responsibility
+
+#### Responsibility
 
 Describes the responsibilities associated with a business representative.
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | isController | `boolean` |  |
 | isOwner | `boolean` |  |
 | ownershipPercentage | `integer` | Required if `isOwner` is true |
 | jobTitle | `string` |  |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "isController": "boolean",
+  "isOwner": "boolean",
+  "ownershipPercentage": "integer",
+  "jobTitle": "string"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
-## Type: Representative
+
+#### Representative
 
 Describes an individual who represents a business account.
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | name | `string` |  |
@@ -156,29 +250,64 @@ Describes an individual who represents a business account.
 | createdOn | `string` | Date representative was recorded |
 | updatedOn | `string` | Date representative was last updated |
 | disabledOn | `string` | Date representative was removed from business |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "name": "string",
+  "phone": "Phone",
+  "email": "string",
+  "address": "Address",
+  "birthDateProvided": "boolean",
+  "governmentIDProvided": "boolean",
+  "responsibilities": "Array.<Responsibility>",
+  "createdOn": "string",
+  "updatedOn": "string",
+  "disabledOn": "string"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
-## Type: IndustryCodes
+
+#### IndustryCodes
 
 Standard industry codes for businesses.
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | naics | `string` |  |
 | sic | `string` |  |
 | mcc | `string` |  |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "naics": "string",
+  "sic": "string",
+  "mcc": "string"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
-## Type: BusinessProfile
+
+#### BusinessProfile
 
 Describes a business account.
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | legalBusinessName} | `string` |  |
@@ -193,67 +322,142 @@ Describes a business account.
 | representatives | `Array.<Representative>` |  |
 | ownersProvided | `boolean` | True if business owner(s) have been provided |
 | industryCodes | `IndustryCodes` |  |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "legalBusinessName}": "string",
+  "doingBusinessAs": "string",
+  "businessType": ""soleProprietorship"\|"unincorporatedAssociation"\|"trust"\|"publicCorporation"\|"privateCorporation"\|"privateCorporation"\|"llc"\|"partnership"\|"unincorporatedNonProfit"\|"incorporatedNonProfit"",
+  "address": "Address",
+  "phone": "Phone",
+  "email": "string",
+  "website": "string",
+  "description": "string",
+  "taxIDProvided": "boolean",
+  "representatives": "Array.<Representative>",
+  "ownersProvided": "boolean",
+  "industryCodes": "IndustryCodes"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
-## Type: CustomerSupport
+
+#### CustomerSupport
 
 Describes customer support contact information for a business account.
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | phone | `Phone` |  |
 | email | `string` |  |
 | address | `Address` |  |
 | website | `string` |  |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "phone": "Phone",
+  "email": "string",
+  "address": "Address",
+  "website": "string"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
-## Type: CardPaymentSettings
+
+#### CardPaymentSettings
 
 
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | statementDescriptor | `string` | Description to display on credit card transactions |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "statementDescriptor": "string"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
-## Type: AccountSettings
+
+#### AccountSettings
 
 
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | cardPayment | `CardPaymentSettings` | Card payment settings (business only) |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "cardPayment": "CardPaymentSettings"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
-## Type: Profile
+
+#### Profile
 
 Profile for a Moov acocunt. May be business or individual.
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | business | `BusinessProfile` |  |
 | individual | `IndividualProfile` |  |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "business": "BusinessProfile",
+  "individual": "IndividualProfile"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
-## Type: Account
+
+#### Account
 
 Describes a Moov account associated with an individual or a business.
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | mode | `"sandbox"\|"production"` | Mode this account is allowed to be used within |
@@ -267,6 +471,27 @@ Describes a Moov account associated with an individual or a business.
 | settings | `AccountSettings` | Account settings |
 | createdOn | `string` | Date account was created |
 | updatedOn | `string` | Date account was last updated |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "mode": ""sandbox"\|"production"",
+  "accountID": "string",
+  "accountType": ""individual"\|"business"",
+  "displayName": "string",
+  "profile": "Profile",
+  "metadata": "object",
+  "foreignID": "string",
+  "customerSupport": "CustomerSupport\|null",
+  "settings": "AccountSettings",
+  "createdOn": "string",
+  "updatedOn": "string"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
+
+
 
 
 

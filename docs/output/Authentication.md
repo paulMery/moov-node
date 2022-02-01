@@ -4,9 +4,15 @@ weight: 20
 ---
 
 
-## Moov.generateToken(scopes, accountID)
+## Functions
+### GenerateToken
+
 
 Generates an OAuth token required by Moov API requests.
+
+```javascript
+moov.generateToken(scopes, accountID)
+```
 
 **Parameters**
 
@@ -14,6 +20,8 @@ Generates an OAuth token required by Moov API requests.
 | ---- | ---- | ----------- |
 | scopes | `Array.<SCOPES>` | One or more permissions to request |
 | accountID | `string` | Account on which to request permissions, default is faciliator account ID |
+
+
 
 **Returns**
 
@@ -32,23 +40,39 @@ const token = await moov.generateToken([
   SCOPES.PING
 ]);
 ```
-## Type: Token
+## Types
+#### Token
 
 OAuth2 token returned by `Moov.generateToken()`. Use `Token.token` in Moov.js
 and client-side code to make calls to the Moov API.
 
 **Properties**
 
+{{< tabs >}}
+  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | token | `string` | String token required by Moov API requests |
 | expiresOn | `Date` | Date and time when the token expires |
 | refreshToken | `string` | String used to refresh this token |
+  {{< /tab >}}
+  {{< tab title="JSON">}}
+```json
+{ 
+  "token": "string",
+  "expiresOn": "Date",
+  "refreshToken": "string"
+}
+```
+  {{</ tab>}}
+{{</ tabs>}}
 
 
 
 
-## Enum: SCOPES
+
+## Enums
+#### SCOPES
 
 Available scopes to request on OAuth tokens.
 

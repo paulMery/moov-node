@@ -3,13 +3,18 @@ title: "Moov"
 weight: 10
 ---
 
-## Class Moov
+### Moov
 
 The Moov API client.
 
-## new Moov(credentials, gotOptionsOrInstance)
+### Moov
+
 
 Initializes a new instance of the Moov API client.
+
+```javascript
+new Moov(credentials, gotOptionsOrInstance)
+```
 
 **Parameters**
 
@@ -21,6 +26,8 @@ Initializes a new instance of the Moov API client.
 | credentials.secretKey | `string` | Secret key value from API key |
 | credentials.domain | `string` | One of the domains from API key |
 | gotOptionsOrInstance | `object` | Customized Got options or instance. See [docs](https://github.com/sindresorhus/got). |
+
+
 
 
 Get the information for the `credentials` parameter from the Moov
@@ -41,9 +48,15 @@ const moov = new Moov({
   domain: "...",
 });
 ```
-## Moov.ping()
+### Ping
+
+
 Pings the Moov servers to check for connectivity.
 See https://docs.moov.io/api.
+
+```javascript
+moov.ping()
+```
 
 
 
@@ -60,7 +73,7 @@ try {
   // Ping failed
 }
 ```
-## Moov.accounts
+#### Moov.accounts
 
 Gets the Accounts API.
 
@@ -78,5 +91,8 @@ try {
   // ...
 }
 ```
+
+
+
 
 
