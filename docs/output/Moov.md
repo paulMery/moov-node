@@ -36,6 +36,8 @@ const moov = new Moov({
   domain: "...",
 });
 ```
+
+
 ## Moov.ping()
 Pings the Moov servers to check for connectivity.
 See https://docs.moov.io/api.
@@ -55,6 +57,8 @@ try {
   // Ping failed
 }
 ```
+
+
 ## Moov.accounts
 
 Gets the Accounts API.
@@ -73,5 +77,26 @@ try {
   // ...
 }
 ```
+
+## Moov.transfers
+
+Gets the Transfers API.
+
+**Type**: `Transfers`
+
+ 
+
+**Examples**
+
+```javascript
+const moov = new Moov(...);
+try {
+  await moov.transfers.create(...);
+} catch (err) {
+  // ...
+}
+```
+
+
 
 

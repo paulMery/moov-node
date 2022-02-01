@@ -29,6 +29,8 @@ const token = await moov.generateToken([
   SCOPES.PING
 ]);
 ```
+
+
 ## Type: Token
 
 OAuth2 token returned by `Moov.generateToken()`. Use `Token.token` in Moov.js
@@ -56,6 +58,8 @@ Available scopes to request on OAuth tokens.
 | ACCOUNTS_CREATE | Create new accounts |
 | PROFILE_READ | Read account information |
 | PROFILE_WRITE | Write account information |
+| TRANSFERS_READ | List and retrieve transfers |
+| TRANSFERS_WRITE | Create and update transfers |
 | PING | Ping Moov servers to test for connectivity |
 
 
