@@ -17,7 +17,7 @@ accounts.create(account)
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| account | `Account` | New account details |
+| account |  [Account](#account) | New account details |
 
 
 
@@ -41,7 +41,7 @@ accounts.get(connectedAccountID)
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| connectedAccountID | `string` | Account to query |
+| connectedAccountID |  string | Account to query |
 
 
 
@@ -65,7 +65,7 @@ accounts.update(account)
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| account | `Account` | Account to update |
+| account |  [Account](#account) | Account to update |
 
 
 
@@ -90,7 +90,7 @@ accounts.patch(account)
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| account | `Account` | Account to update |
+| account |  [Account](#account) | Account to update |
 
 
 

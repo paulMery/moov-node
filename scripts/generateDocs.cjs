@@ -77,27 +77,32 @@ function parseData(jsdocsData) {
   // TODO: Handle parameters in functions
   const typeAndEnumNames = jsdocDataFiltered.filter((doc, i) => doc.kind === "typedef" || "enum").map(doc => doc.name.toLowerCase());
   const mappedJsdoc = jsdocDataFiltered.map((doc, i) => {
-    if(doc.kind === "typedef") {
-      doc.properties = doc.properties.map((prop) => {
-        if(prop.type.names) {
-          prop.type.names.forEach((name, index) => {
-            // Check if the value is an array
-            let isArray =  name.includes("Array.<");
-            const tagName = name.replace("Array.<", "").replace(">", "")
-            // Find link value for each name
-            const typeToMatch = isArray? tagName : name;
-            const i = typeAndEnumNames.indexOf(typeToMatch.toLowerCase());
-            // Hydrate the names array with an object with additional information
-            prop.type.names[index] = {
-              link: i >= 0 ? `#${typeToMatch.toLowerCase()}` : null,
-              name: name,
-              isArray
+    function mapTypes(propOrParam) {
+      if(propOrParam.type.names) {
+        propOrParam.type.names.forEach((name, index) => {
+          // Check if the value is an array
+          let isArray =  name.includes("Array.<");
+          const tagName = name.replace("Array.<", "").replace(">", "")
+          // Find link value for each name
+          const typeToMatch = isArray? tagName : name;
+          const i = typeAndEnumNames.indexOf(typeToMatch.toLowerCase());
+          // Hydrate the names array with an object with additional information
+          propOrParam.type.names[index] = {
+            link: i >= 0 ? `#${typeToMatch.toLowerCase()}` : null,
+            name: name,
+            isArray
 
-            };
-          })
-        }
-        return prop;
-      })
+          };
+        })
+        return propOrParam;
+      }
+    }
+    if(doc.kind === "typedef") {
+      doc.properties = doc.properties.map((prop) => mapTypes(prop))
+    }
+
+    if(doc.kind === "function") {
+      doc.params = doc.params.map((param) => mapTypes(param))
     }
     return doc;
   })
