@@ -91,7 +91,6 @@ function parseData(jsdocsData) {
             link: i >= 0 ? `#${typeToMatch.toLowerCase()}` : null,
             name: name,
             isArray
-
           };
         })
         return propOrParam;
@@ -100,9 +99,15 @@ function parseData(jsdocsData) {
     if(doc.kind === "typedef") {
       doc.properties = doc.properties.map((prop) => mapTypes(prop))
     }
-
-    if(doc.kind === "function") {
+    if(doc.kind == "function") {
       doc.params = doc.params.map((param) => mapTypes(param))
+    }
+    if(doc.kind === "constructor") {
+      doc.params = doc.params.map((param) => mapTypes(param))
+    }
+    if(doc.kind === "member") {
+      // TODO: Add link to the member that goes to the proper page
+      // doc.params = doc.params.map((param) => mapTypes(param))
     }
     return doc;
   })
