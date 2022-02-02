@@ -27,7 +27,6 @@ accounts.create(account)
 
 
 
-
 ### Get
 
 
@@ -48,7 +47,6 @@ accounts.get(connectedAccountID)
 **Returns**
 
 `Promise.<Account>`
-
 
 
 
@@ -75,7 +73,6 @@ accounts.update(account)
 
 
 
-
 ### Patch
 
 
@@ -97,7 +94,6 @@ accounts.patch(account)
 **Returns**
 
 `Promise.<Account>`
-
 
 
 

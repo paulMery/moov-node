@@ -46,6 +46,8 @@ const moov = new Moov({
 ```
 
 
+
+
 ### Accounts
 
 ```javascript
@@ -68,6 +70,32 @@ try {
   // ...
 }
 ```
+
+
+### Transfers
+
+```javascript
+moov.transfers
+```
+
+More on [transfers](transfers).
+
+Gets the Transfers API.
+
+ 
+
+**Examples**
+
+```javascript
+const moov = new Moov(...);
+try {
+  await moov.transfers.create(...);
+} catch (err) {
+  // ...
+}
+```
+
+
 
 
 

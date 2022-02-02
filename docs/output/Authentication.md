@@ -40,6 +40,8 @@ const token = await moov.generateToken([
   SCOPES.PING
 ]);
 ```
+
+
 ### Ping
 
 
@@ -65,6 +67,8 @@ try {
   // Ping failed
 }
 ```
+
+
 
 ## Types
 #### Token
