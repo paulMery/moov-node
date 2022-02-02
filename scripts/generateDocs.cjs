@@ -293,6 +293,14 @@ function writeDataToTemplates(data) {
     const outputPath = path.join(OUTPUT_PATH, `${filename}.md`);
     try {
       fs.writeFileSync(outputPath, tagTemplate(apiDocs));
+
+      const localCopy = false; 
+      if(localCopy){
+        const pathToDocRepo = '/Users/scottmoov/Documents/projects/'; // Replace with path to cloned docs repo
+        const localpath = 'docs/content/node/' + filename + '.md'
+        fs.writeFileSync(pathToDocRepo + localpath, tagTemplate(apiDocs));
+      }
+
     } catch (err) {
       console.error(`Unable to write docs to "${outputPath}"`);
       console.error(err.message);
