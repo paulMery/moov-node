@@ -8,10 +8,7 @@ import { loadCredentials } from "./loadCredentials.js";
 async function run() {
   // Load credentials and initialize the Moov client
   const credentials = loadCredentials("./secrets/credentials.json");
-  const moov = new Moov(credentials, {
-    ...gotOptionsForLogging,
-    prefixUrl: "https://api.moov-staging.io",
-  });
+  const moov = new Moov(credentials, gotOptionsForLogging);
 
   // Create a new account
   const account = await moov.accounts.create({
