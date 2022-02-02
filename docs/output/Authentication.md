@@ -74,26 +74,11 @@ and client-side code to make calls to the Moov API.
 
 **Properties**
 
-{{< tabs >}}
-  {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-| token | `string` | String token required by Moov API requests |
-| expiresOn | `Date` | Date and time when the token expires |
-| refreshToken | `string` | String used to refresh this token |
-  {{< /tab >}}
-  {{< tab title="JSON">}}
-```json
-{ 
-  "token": "string",
-  "expiresOn": "Date",
-  "refreshToken": "string"
-}
-```
-  {{</ tab>}}
-{{</ tabs>}}
-
-
+  | token | string| String token required by Moov API requests |
+  | expiresOn | Date| Date and time when the token expires |
+  | refreshToken | string| String used to refresh this token |
 
 
 

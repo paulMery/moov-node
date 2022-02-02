@@ -1,23 +1,31 @@
 {{#if properties}}
 **Properties**
 
-\{{< tabs >}}
+  {{#if examples}}
+
+\{{< tabs>}}
   \{{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 {{#each properties}}
-| {{name}} | `{{joinTypes type.names}}` | {{description}} |
+| {{name}} | {{#each type.names}} {{renderLink name link isArray}}{{~#unless @last~}}, {{/unless~}} {{/each}} | {{description}} |
 {{/each}}
-  \{{< /tab >}}
-  \{{< tab title="JSON">}}
-```json
-{ 
-{{#each properties}}
-  "{{name}}": "{{joinTypes type.names}}"{{#if @last}}{{else}},{{/if}}
-{{/each}}
-}
+  \{{< /tab>}}
+  {{#each examples~}}
+    \{{< tab title="Example">}}
+```javascript
+{{.}}
 ```
-  \{{</ tab>}}
+    \{{</ tab>}}
+  {{~/each~}}
 \{{</ tabs>}}
+
+  {{else}}
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+{{#each properties}}
+  | {{name}} |{{#each type.names}} {{renderLink name link isArray}}{{~#unless @last~}}, {{/unless~}} {{/each}}| {{description}} |
+{{/each}}
+  {{/if}}
 
 {{/if}}

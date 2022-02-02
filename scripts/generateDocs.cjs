@@ -73,8 +73,38 @@ function parseData(jsdocsData) {
         x.kind === "function"
     );
 
+  // Adds relative links to typedef properties
+  // TODO: Handle parameters in functions
+  const typeAndEnumNames = jsdocDataFiltered.filter((doc, i) => doc.kind === "typedef" || "enum").map(doc => doc.name.toLowerCase());
+  const mappedJsdoc = jsdocDataFiltered.map((doc, i) => {
+    if(doc.kind === "typedef") {
+      doc.properties = doc.properties.map((prop) => {
+        if(prop.type.names) {
+          prop.type.names.forEach((name, index) => {
+            // Check if the value is an array
+            let isArray =  name.includes("Array.<");
+            const tagName = name.replace("Array.<", "").replace(">", "")
+            // Find link value for each name
+            const typeToMatch = isArray? tagName : name;
+            const i = typeAndEnumNames.indexOf(typeToMatch.toLowerCase());
+            // Hydrate the names array with an object with additional information
+            prop.type.names[index] = {
+              link: i >= 0 ? `#${typeToMatch.toLowerCase()}` : null,
+              name: name,
+              isArray
+
+            };
+          })
+        }
+        return prop;
+      })
+    }
+    return doc;
+  })
+
+  
   // Group identifiers by tag
-  const jsdocDataByTag = _.groupBy(jsdocDataFiltered, (x) =>
+  const jsdocDataByTag = _.groupBy(mappedJsdoc, (x) =>
     x.tags?.length ? x.tags[0].text : "untagged"
   );
 
@@ -168,7 +198,7 @@ function writeDataToTemplates(data) {
   handlebars.registerHelper("isConstructor", (x) => x.kind === "constructor");
   handlebars.registerHelper("isGlobal", (x) => x.scope === "global");
   handlebars.registerHelper("isTopLevelParam", (x) => x.indexOf(".") === -1);
-  handlebars.registerHelper("joinTypes", (x) => x.join("\\|"));
+  handlebars.registerHelper("joinTypes", (x) => x.join(", "));
   handlebars.registerHelper(
     "object",
     (obj) => new handlebars.SafeString(inspect(obj))
@@ -178,6 +208,16 @@ function writeDataToTemplates(data) {
     (x) => x.summary || x.description
   );
   handlebars.registerHelper("capitalizeFirst")
+  // Renders the inline link
+  handlebars.registerHelper("renderLink", (name, link, isArray) => {
+    if(isArray){
+      const linkText = name.replace("Array.<", "").replace(">", "");
+      return `Array.<[${linkText}](${link})>`
+    } else if (link){
+      return `[${name}](${link})`
+    }
+    return name;
+  });
 
   // Register partials
   try {
