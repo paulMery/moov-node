@@ -81,6 +81,8 @@ function parseData(jsdocsData) {
       if(propOrParam.type.names) {
         propOrParam.type.names.forEach((name, index) => {
           // Check if the value is an array
+
+          // TODO: Only do this replacement if there is a match. I.E. Array.<string> should not be a link. 
           let isArray =  name.includes("Array.<");
           const tagName = name.replace("Array.<", "").replace(">", "")
           // Find link value for each name
@@ -126,7 +128,7 @@ function parseData(jsdocsData) {
     // Get weight to ensure proper order of
     const tagIndex = menuOrder.indexOf(tag);
     const weight = (tagIndex + 1) * 10;
-
+    if(tag === "Moov") tag = "Node SDK";
     docData[tag] = {
       name: tag,
       weight
@@ -288,7 +290,7 @@ function writeDataToTemplates(data) {
     // Write the final file
     let filename =  tag; 
     // Rename Moov tag to index;
-    if(tag === 'Moov')filename = '_index';
+    if(tag === 'Node SDK')filename = '_index';
     const outputPath = path.join(OUTPUT_PATH, `${filename}.md`);
     try {
       fs.writeFileSync(outputPath, tagTemplate(apiDocs));
