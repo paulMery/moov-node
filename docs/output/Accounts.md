@@ -4,7 +4,7 @@ weight: 30
 ---
 
 
-### Create
+## Create
 
 
 Create a new connected account.
@@ -27,7 +27,7 @@ accounts.create(account)
 
 
 
-### Get
+## Get
 
 
 Retrieves details for the account with the specified ID.
@@ -50,7 +50,7 @@ accounts.get(connectedAccountID)
 
 
 
-### Update
+## Update
 
 
 Updates an existing account. Requires a complete Account object.
@@ -73,7 +73,7 @@ accounts.update(account)
 
 
 
-### Patch
+## Patch
 
 
 Updates an existing account. Does not require a complete Account object,
@@ -100,9 +100,8 @@ accounts.patch(account)
 
 
 
-
 ## Types
-#### Account
+### Account
 
 Describes a Moov account associated with an individual or a business.
 
@@ -271,7 +270,7 @@ Describes a Moov account associated with an individual or a business.
 
 
 
-#### Profile
+### Profile
 
 Profile for a Moov acocunt. May be business or individual.
 
@@ -284,7 +283,7 @@ Profile for a Moov acocunt. May be business or individual.
 
 
 
-#### BusinessProfile
+### BusinessProfile
 
 Describes a business account.
 
@@ -307,7 +306,7 @@ Describes a business account.
 
 
 
-#### IndividualProfile
+### IndividualProfile
 
 Describes the individual associated with a non-business account.
 
@@ -324,7 +323,7 @@ Describes the individual associated with a non-business account.
 
 
 
-#### Phone
+### Phone
 
 
 
@@ -337,7 +336,7 @@ Describes the individual associated with a non-business account.
 
 
 
-#### Address
+### Address
 
 
 
@@ -354,7 +353,7 @@ Describes the individual associated with a non-business account.
 
 
 
-#### IndustryCodes
+### IndustryCodes
 
 Standard industry codes for businesses.
 
@@ -368,7 +367,7 @@ Standard industry codes for businesses.
 
 
 
-#### Representative
+### Representative
 
 Describes an individual who represents a business account.
 
@@ -389,7 +388,7 @@ Describes an individual who represents a business account.
 
 
 
-#### Responsibility
+### Responsibility
 
 Describes the responsibilities associated with a business representative.
 
@@ -404,7 +403,7 @@ Describes the responsibilities associated with a business representative.
 
 
 
-#### CustomerSupport
+### CustomerSupport
 
 Describes customer support contact information for a business account.
 
@@ -419,7 +418,7 @@ Describes customer support contact information for a business account.
 
 
 
-#### AccountSettings
+### AccountSettings
 
 
 
@@ -431,7 +430,7 @@ Describes customer support contact information for a business account.
 
 
 
-#### CardPaymentSettings
+### CardPaymentSettings
 
 
 

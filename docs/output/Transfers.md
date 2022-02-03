@@ -4,7 +4,7 @@ weight: 40
 ---
 
 
-### Create
+## Create
 
 
 Creates a transfer to move money from a source to a destination.
@@ -52,7 +52,7 @@ try {
 ```
 
 
-### List
+## List
 
 
 Lists transfers that match the given criteria.
@@ -95,7 +95,7 @@ try {
 ```
 
 
-### Get
+## Get
 
 
 Gets the details of a transfer.
@@ -130,7 +130,7 @@ try {
 ```
 
 
-### UpdateMetadata
+## UpdateMetadata
 
 
 Update the metadata on a transfer.
@@ -169,7 +169,7 @@ try {
 ```
 
 
-### GetTransferOptions
+## GetTransferOptions
 
 
 Gets the available payment options for a transfer.
@@ -217,7 +217,7 @@ try {
 ```
 
 
-### Refund
+## Refund
 
 
 Initiate a refund for a card transfer.
@@ -252,7 +252,7 @@ try {
 ```
 
 
-### ListRefunds
+## ListRefunds
 
 
 List refunds for a card transfer.
@@ -287,7 +287,7 @@ try {
 ```
 
 
-### GetRefund
+## GetRefund
 
 
 Get details of a specific refund.
@@ -326,9 +326,8 @@ try {
 
 
 
-
 ## Types
-#### PaymentMethodAccount
+### PaymentMethodAccount
 
 High-level account information associated with a payment method.
 
@@ -342,7 +341,7 @@ High-level account information associated with a payment method.
 
 
 
-#### BankAccount
+### BankAccount
 
 
 
@@ -362,7 +361,7 @@ High-level account information associated with a payment method.
 
 
 
-#### Wallet
+### Wallet
 
 
 
@@ -374,7 +373,7 @@ High-level account information associated with a payment method.
 
 
 
-#### CardExpiration
+### CardExpiration
 
 
 
@@ -387,7 +386,7 @@ High-level account information associated with a payment method.
 
 
 
-#### CardVerification
+### CardVerification
 
 The results of submitting cardholder data to a card network for verification.
 
@@ -401,7 +400,7 @@ The results of submitting cardholder data to a card network for verification.
 
 
 
-#### Card
+### Card
 
 
 
@@ -422,7 +421,7 @@ The results of submitting cardholder data to a card network for verification.
 
 
 
-#### ACHCode
+### ACHCode
 
 Models the reason for an ACH return or correction.
 
@@ -436,7 +435,7 @@ Models the reason for an ACH return or correction.
 
 
 
-#### ACHDetails
+### ACHDetails
 
 
 
@@ -451,7 +450,7 @@ Models the reason for an ACH return or correction.
 
 
 
-#### PaymentMethod
+### PaymentMethod
 
 
 
@@ -470,7 +469,7 @@ Models the reason for an ACH return or correction.
 
 
 
-#### Amount
+### Amount
 
 
 
@@ -483,7 +482,7 @@ Models the reason for an ACH return or correction.
 
 
 
-#### Refund
+### Refund
 
 
 
@@ -499,7 +498,7 @@ Models the reason for an ACH return or correction.
 
 
 
-#### Transfer
+### Transfer
 
 
 
@@ -522,7 +521,7 @@ Models the reason for an ACH return or correction.
 
 
 
-#### TransferResponse
+### TransferResponse
 
 
 
@@ -534,7 +533,7 @@ Models the reason for an ACH return or correction.
 
 
 
-#### TransferListCriteria
+### TransferListCriteria
 
 
 
@@ -551,7 +550,7 @@ Models the reason for an ACH return or correction.
 
 
 
-#### TransferOptionsCriteria
+### TransferOptionsCriteria
 
 Criteria for finding available payment types for a transfer.
 
@@ -569,7 +568,7 @@ Criteria for finding available payment types for a transfer.
 
 
 
-#### TransferOptions
+### TransferOptions
 
 
 
@@ -585,7 +584,7 @@ Criteria for finding available payment types for a transfer.
 
 
 
-#### AvailableTransferOptions
+### AvailableTransferOptions
 
 
 
@@ -598,7 +597,7 @@ Criteria for finding available payment types for a transfer.
 
 
 
-#### Refund
+### Refund
 
 
 

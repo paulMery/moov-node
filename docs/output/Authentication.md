@@ -4,8 +4,7 @@ weight: 20
 ---
 
 
-## Functions
-### GenerateToken
+## GenerateToken
 
 
 Generates an OAuth token required by Moov API requests.
@@ -42,7 +41,7 @@ const token = await moov.generateToken([
 ```
 
 
-### Ping
+## Ping
 
 
 Pings the Moov servers to check for connectivity.
@@ -71,7 +70,7 @@ try {
 
 
 ## Types
-#### Token
+### Token
 
 OAuth2 token returned by `Moov.generateToken()`. Use `Token.token` in Moov.js
 and client-side code to make calls to the Moov API.
@@ -88,7 +87,7 @@ and client-side code to make calls to the Moov API.
 
 
 ## Enums
-#### SCOPES
+### SCOPES
 
 Available scopes to request on OAuth tokens.
 

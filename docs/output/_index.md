@@ -3,7 +3,7 @@ title: "Node SDK"
 weight: 10
 ---
 
-### Moov
+## Moov
 
 
 Initializes a new instance of the Moov API client.
@@ -94,7 +94,6 @@ try {
   // ...
 }
 ```
-
 
 
 
