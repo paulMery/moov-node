@@ -227,7 +227,8 @@ function writeDataToTemplates(data) {
     } else if (link != null){
       return `[${name}](${link})`
     }else {
-      return `\`${name}\``;
+      const noQuotes = name.replace(/"/g, "");
+      return `\`${noQuotes}\``;
     }
 
   });

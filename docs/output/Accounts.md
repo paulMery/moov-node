@@ -112,9 +112,9 @@ Describes a Moov account associated with an individual or a business.
   {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-| mode |  `"sandbox"`,  `"production"` | Mode this account is allowed to be used within |
+| mode |  `sandbox`,  `production` | Mode this account is allowed to be used within |
 | accountID |  `string` | Account identifier |
-| accountType |  `"individual"`,  `"business"` | Type of entity represented by this account |
+| accountType |  `individual`,  `business` | Type of entity represented by this account |
 | displayName |  `string` | Name of individual or business |
 | profile |  [Profile](#profile) | Details for individual or business |
 | metadata |  `object` | Arbitrary key-value pairs |
@@ -293,7 +293,7 @@ Describes a business account.
 | ---- | ---- | ----------- |
   | legalBusinessName | `string`|  |
   | doingBusinessAs | `string`|  |
-  | businessType | `"soleProprietorship"`,  `"unincorporatedAssociation"`,  `"trust"`,  `"publicCorporation"`,  `"privateCorporation"`,  `"privateCorporation"`,  `"llc"`,  `"partnership"`,  `"unincorporatedNonProfit"`,  `"incorporatedNonProfit"`|  |
+  | businessType | `soleProprietorship`,  `unincorporatedAssociation`,  `trust`,  `publicCorporation`,  `privateCorporation`,  `privateCorporation`,  `llc`,  `partnership`,  `unincorporatedNonProfit`,  `incorporatedNonProfit`|  |
   | address | [Address](#address)|  |
   | phone | [Phone](#phone)|  |
   | email | `string`|  |

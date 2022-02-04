@@ -351,11 +351,11 @@ High-level account information associated with a payment method.
 | ---- | ---- | ----------- |
   | bankAccountID | `string`|  |
   | fingerprint | `string`|  |
-  | status | `"new"`,  `"verified"`,  `"verificationFailed"`,  `"pending"`,  `"errored"`|  |
+  | status | `new`,  `verified`,  `verificationFailed`,  `pending`,  `errored`|  |
   | holderName | `string`|  |
-  | holderType | `"individual"`,  `"business"`|  |
+  | holderType | `individual`,  `business`|  |
   | bankName | `string`|  |
-  | bankAccountType | `"checking"`,  `"savings"`,  `"unknown"`|  |
+  | bankAccountType | `checking`,  `savings`,  `unknown`|  |
   | routingNumber | `string`|  |
   | lastFourAccountNumber | `string`|  |
 
@@ -394,9 +394,9 @@ The results of submitting cardholder data to a card network for verification.
 
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-  | cvv | `"noMatch"`,  `"match"`,  `"notChecked"`,  `"unavailable"`|  |
-  | addressLine1 | `"noMatch"`,  `"match"`,  `"notChecked"`,  `"unavailable"`|  |
-  | postalCode | `"noMatch"`,  `"match"`,  `"notChecked"`,  `"unavailable"`|  |
+  | cvv | `noMatch`,  `match`,  `notChecked`,  `unavailable`|  |
+  | addressLine1 | `noMatch`,  `match`,  `notChecked`,  `unavailable`|  |
+  | postalCode | `noMatch`,  `match`,  `notChecked`,  `unavailable`|  |
 
 
 
@@ -410,8 +410,8 @@ The results of submitting cardholder data to a card network for verification.
 | ---- | ---- | ----------- |
   | cardID | `string`|  |
   | fingerprint | `string`|  |
-  | brand | `"American Express"`,  `"Discover"`,  `"MasterCard"`,  `"Visa"`|  |
-  | cardType | `"debit"`,  `"credit"`,  `"prepaid"`,  `"unknown"`|  |
+  | brand | `American Express`,  `Discover`,  `MasterCard`,  `Visa`|  |
+  | cardType | `debit`,  `credit`,  `prepaid`,  `unknown`|  |
   | lastFourCardNumber | `string`|  |
   | bin | `string`|  |
   | expiration | [CardExpiration](#cardexpiration)|  |
@@ -443,7 +443,7 @@ Models the reason for an ACH return or correction.
 
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-  |  | `"initiated"`,  `"originated"`,  `"corrected"`,  `"returned"`,  `"completed"`|  |
+  |  | `initiated`,  `originated`,  `corrected`,  `returned`,  `completed`|  |
   | traceNumber | `string`|  |
   | return | [ACHCode](#achcode)|  |
   | correction | [ACHCode](#achcode)|  |
@@ -459,7 +459,7 @@ Models the reason for an ACH return or correction.
 | Property | Type | Description |
 | ---- | ---- | ----------- |
   | paymentMethodID | `string`|  |
-  | paymentMethodType | `"moov-wallet"`,  `"ach-debit-fund"`,  `"ach-debit-collect"`,  `"ach-credit-standard"`,  `"ach-credit-same-day"`,  `"rtp-credit"`,  `"card-payment"`|  |
+  | paymentMethodType | `moov-wallet`,  `ach-debit-fund`,  `ach-debit-collect`,  `ach-credit-standard`,  `ach-credit-same-day`,  `rtp-credit`,  `card-payment`|  |
   | account | [PaymentMethodAccount](#paymentmethodaccount)|  |
   | bankAccount | [BankAccount](#bankaccount)|  |
   | wallet | [Wallet](#wallet)|  |
@@ -493,7 +493,7 @@ Models the reason for an ACH return or correction.
   | refundID | `string`|  |
   | createdOn | `string`|  |
   | updatedOn | `string`|  |
-  | status | `"created"`,  `"pending"`,  `"completed"`,  `"failed"`|  |
+  | status | `created`,  `pending`,  `completed`,  `failed`|  |
   | amount | [Amount](#amount)|  |
 
 
@@ -508,7 +508,7 @@ Models the reason for an ACH return or correction.
 | ---- | ---- | ----------- |
   | transferID | `string`|  |
   | createdAt | `string`|  |
-  | status | `"created"`,  `"pending"`,  `"completed"`,  `"failed"`,  `"reversed"`|  |
+  | status | `created`,  `pending`,  `completed`,  `failed`,  `reversed`|  |
   | source | [PaymentMethod](#paymentmethod)|  |
   | destination | [PaymentMethod](#paymentmethod)|  |
   | amount | [Amount](#amount)|  |
@@ -577,7 +577,7 @@ Criteria for finding available payment types for a transfer.
 | Property | Type | Description |
 | ---- | ---- | ----------- |
   | paymentMethodID | `string`|  |
-  | paymentMethodType | `"moov-wallet"`,  `"ach-debit-fund"`,  `"ach-debit-collect"`,  `"ach-credit-standard"`,  `"ach-credit-same-day"`,  `"rtp-credit"`,  `"card-payment"`|  |
+  | paymentMethodType | `moov-wallet`,  `ach-debit-fund`,  `ach-debit-collect`,  `ach-credit-standard`,  `ach-credit-same-day`,  `rtp-credit`,  `card-payment`|  |
   | wallet | [Wallet](#wallet)| Populated when `paymentMethodType` is "moov-wallet" |
   | bankAccount | [BankAccount](#bankaccount)| Populated when `paymentMethodType` is one of the ACH or FTP variations |
   | card | [Card](#card)| Populated when `paymentMethodType` is "card-payment" |
@@ -608,7 +608,7 @@ Criteria for finding available payment types for a transfer.
   | refundID | `string`|  |
   | createdOn | `string`|  |
   | updatedOn | `string`|  |
-  | status | `"created"`,  `"pending"`,  `"completed"`,  `"failed"`|  |
+  | status | `created`,  `pending`,  `completed`,  `failed`|  |
   | amount | [Amount](#amount)|  |
 
 
