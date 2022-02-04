@@ -43,7 +43,21 @@ See the [`/examples`]() folder for more details.
 
 ## Documentation
 
-TBD
+The node SDK is documented using [JSDoc](https://jsdoc.app/index.html) comments to annotate functions, methods, types, and enums. This allows us to provide autofill and inline context to developers, and is used to generate markdown files which are copied into our docs repo and exposed on docs.moov.io.
+
+The following JSDoc tags should be included on any functions, methods, types, and enums that we want to expose to end users. 
+
+@summary - Short description that appears at the start of the section
+@description - Longer description that will appear at start if no summary is provided. 
+@example - Used to include a code example of how a customer would implement this. Multiple examples can be used. 
+@param - Documents a parameter of a function or method. 
+@returns - What the function will return
+@tag - The tag determines which markdown file the element will be included on. 
+@typedef - To document types like `Account` or `Transfer`. You can reference other types in your type definition. 
+@property - Used with the @typedef to document a propery of the type. 
+@enum - To document Enums
+@private - To not include the in any public documentation for customers. 
+
 
 ## Troubleshooting and support
 

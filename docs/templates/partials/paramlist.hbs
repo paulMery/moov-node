@@ -4,6 +4,8 @@
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 {{#each params}}
-| {{name}} | `{{joinTypes type.names}}` | {{description}} |
+| {{name}} | {{#each type.names}} {{renderLink name link isArray}}{{~#unless @last~}}, {{/unless~}} {{/each}} | {{description}} |
 {{/each}}
+
+
 {{/if}}

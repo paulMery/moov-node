@@ -1,5 +1,10 @@
-## {{#if (isConstructor .)~}}new {{else}}{{~#unless (isGlobal .)~}}{{memberof}}.{{~/unless~}}{{/if~}}
+## {{capitalize name}}
 
+
+{{summaryOrDescription .}}
+
+```javascript
+{{#if (isConstructor .)~}}new {{else}}{{~#unless (isGlobal .)~}}{{lowercase memberof}}.{{~/unless~}}{{/if~}}
 {{~name~}}
 {{~#if this.params~}}
   (
@@ -12,9 +17,8 @@
   )
 {{else}}
 ()
-{{~/if}}
-
-{{summaryOrDescription .}}
+{{/if}}
+```
 
 {{>paramlist}}
 
