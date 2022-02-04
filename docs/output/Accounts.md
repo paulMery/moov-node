@@ -40,7 +40,7 @@ accounts.get(connectedAccountID)
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| connectedAccountID |  string | Account to query |
+| connectedAccountID |  `string` | Account to query |
 
 
 
@@ -112,17 +112,17 @@ Describes a Moov account associated with an individual or a business.
   {{< tab title="Details">}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-| mode |  "sandbox",  "production" | Mode this account is allowed to be used within |
-| accountID |  string | Account identifier |
-| accountType |  "individual",  "business" | Type of entity represented by this account |
-| displayName |  string | Name of individual or business |
+| mode |  `"sandbox"`,  `"production"` | Mode this account is allowed to be used within |
+| accountID |  `string` | Account identifier |
+| accountType |  `"individual"`,  `"business"` | Type of entity represented by this account |
+| displayName |  `string` | Name of individual or business |
 | profile |  [Profile](#profile) | Details for individual or business |
-| metadata |  object | Arbitrary key-value pairs |
-| foreignID |  string | Optional identification or alias |
-| customerSupport |  [CustomerSupport](#customersupport),  null | Displayed on credit card transactions (business only) |
+| metadata |  `object` | Arbitrary key-value pairs |
+| foreignID |  `string` | Optional identification or alias |
+| customerSupport |  [CustomerSupport](#customersupport),  `null` | Displayed on credit card transactions (business only) |
 | settings |  [AccountSettings](#accountsettings) | Account settings |
-| createdOn |  string | Date account was created |
-| updatedOn |  string | Date account was last updated |
+| createdOn |  `string` | Date account was created |
+| updatedOn |  `string` | Date account was last updated |
   {{< /tab>}}
 {{< tab title="Example">}}
 ```javascript
@@ -291,17 +291,17 @@ Describes a business account.
 
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-  | legalBusinessName | string|  |
-  | doingBusinessAs | string|  |
-  | businessType | "soleProprietorship",  "unincorporatedAssociation",  "trust",  "publicCorporation",  "privateCorporation",  "privateCorporation",  "llc",  "partnership",  "unincorporatedNonProfit",  "incorporatedNonProfit"|  |
+  | legalBusinessName | `string`|  |
+  | doingBusinessAs | `string`|  |
+  | businessType | `"soleProprietorship"`,  `"unincorporatedAssociation"`,  `"trust"`,  `"publicCorporation"`,  `"privateCorporation"`,  `"privateCorporation"`,  `"llc"`,  `"partnership"`,  `"unincorporatedNonProfit"`,  `"incorporatedNonProfit"`|  |
   | address | [Address](#address)|  |
   | phone | [Phone](#phone)|  |
-  | email | string|  |
-  | website | string|  |
-  | description | string|  |
-  | taxIDProvided | boolean| True if business's tax ID has been provided |
+  | email | `string`|  |
+  | website | `string`|  |
+  | description | `string`|  |
+  | taxIDProvided | `boolean`| True if business's tax ID has been provided |
   | representatives | Array.<[Representative](#representative)>|  |
-  | ownersProvided | boolean| True if business owner(s) have been provided |
+  | ownersProvided | `boolean`| True if business owner(s) have been provided |
   | industryCodes | [IndustryCodes](#industrycodes)|  |
 
 
@@ -314,12 +314,12 @@ Describes the individual associated with a non-business account.
 
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-  | name | string|  |
+  | name | `string`|  |
   | phone | [Phone](#phone)|  |
-  | email | string|  |
+  | email | `string`|  |
   | address | [Address](#address)|  |
-  | birthDateProvided | boolean| True if individual's birthdate has been provided |
-  | governmentIDProvided | boolean| True if individual's government-issued ID has been provided |
+  | birthDateProvided | `boolean`| True if individual's birthdate has been provided |
+  | governmentIDProvided | `boolean`| True if individual's government-issued ID has been provided |
 
 
 
@@ -331,8 +331,8 @@ Describes the individual associated with a non-business account.
 
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-  | number | string| Phone number |
-  | countryCode | string| 1 digit country code |
+  | number | `string`| Phone number |
+  | countryCode | `string`| 1 digit country code |
 
 
 
@@ -344,12 +344,12 @@ Describes the individual associated with a non-business account.
 
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-  | addressLine1 | string|  |
-  | addressLine2 | string|  |
-  | city | string|  |
-  | stateOrProvince | string| 2 characters |
-  | postalCode | string| 5 characters |
-  | country | string| 2 characters |
+  | addressLine1 | `string`|  |
+  | addressLine2 | `string`|  |
+  | city | `string`|  |
+  | stateOrProvince | `string`| 2 characters |
+  | postalCode | `string`| 5 characters |
+  | country | `string`| 2 characters |
 
 
 
@@ -361,9 +361,9 @@ Standard industry codes for businesses.
 
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-  | naics | string|  |
-  | sic | string|  |
-  | mcc | string|  |
+  | naics | `string`|  |
+  | sic | `string`|  |
+  | mcc | `string`|  |
 
 
 
@@ -375,16 +375,16 @@ Describes an individual who represents a business account.
 
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-  | name | string|  |
+  | name | `string`|  |
   | phone | [Phone](#phone)|  |
-  | email | string|  |
+  | email | `string`|  |
   | address | [Address](#address)|  |
-  | birthDateProvided | boolean| True if individual's birthdate has been provided |
-  | governmentIDProvided | boolean| True if individual's government-issued ID has been provided |
+  | birthDateProvided | `boolean`| True if individual's birthdate has been provided |
+  | governmentIDProvided | `boolean`| True if individual's government-issued ID has been provided |
   | responsibilities | Array.<[Responsibility](#responsibility)>|  |
-  | createdOn | string| Date representative was recorded |
-  | updatedOn | string| Date representative was last updated |
-  | disabledOn | string| Date representative was removed from business |
+  | createdOn | `string`| Date representative was recorded |
+  | updatedOn | `string`| Date representative was last updated |
+  | disabledOn | `string`| Date representative was removed from business |
 
 
 
@@ -396,10 +396,10 @@ Describes the responsibilities associated with a business representative.
 
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-  | isController | boolean|  |
-  | isOwner | boolean|  |
-  | ownershipPercentage | integer| Required if `isOwner` is true |
-  | jobTitle | string|  |
+  | isController | `boolean`|  |
+  | isOwner | `boolean`|  |
+  | ownershipPercentage | `integer`| Required if `isOwner` is true |
+  | jobTitle | `string`|  |
 
 
 
@@ -412,9 +412,9 @@ Describes customer support contact information for a business account.
 | Property | Type | Description |
 | ---- | ---- | ----------- |
   | phone | [Phone](#phone)|  |
-  | email | string|  |
+  | email | `string`|  |
   | address | [Address](#address)|  |
-  | website | string|  |
+  | website | `string`|  |
 
 
 
@@ -438,7 +438,7 @@ Describes customer support contact information for a business account.
 
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-  | statementDescriptor | string| Description to display on credit card transactions |
+  | statementDescriptor | `string`| Description to display on credit card transactions |
 
 
 

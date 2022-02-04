@@ -82,7 +82,6 @@ function parseData(jsdocsData) {
         propOrParam.type.names.forEach((name, index) => {
           // Check if the value is an array
 
-          // TODO: Only do this replacement if there is a match. I.E. Array.<string> should not be a link. 
           let isArray =  name.includes("Array.<");
           const tagName = name.replace("Array.<", "").replace(">", "")
           // Find link value for each name
@@ -222,13 +221,15 @@ function writeDataToTemplates(data) {
   handlebars.registerHelper("capitalizeFirst")
   // Renders the inline link
   handlebars.registerHelper("renderLink", (name, link, isArray) => {
-    if(isArray){
+    if(isArray && link != null){
       const linkText = name.replace("Array.<", "").replace(">", "");
       return `Array.<[${linkText}](${link})>`
-    } else if (link){
+    } else if (link != null){
       return `[${name}](${link})`
+    }else {
+      return `\`${name}\``;
     }
-    return name;
+
   });
 
   // Register partials
@@ -295,7 +296,7 @@ function writeDataToTemplates(data) {
     try {
       fs.writeFileSync(outputPath, tagTemplate(apiDocs));
 
-      const localCopy = false; 
+      const localCopy = false;
       if(localCopy){
         const pathToDocRepo = '/Users/scottmoov/Documents/projects/'; // Replace with path to cloned docs repo
         const localpath = 'docs/content/node/' + filename + '.md'

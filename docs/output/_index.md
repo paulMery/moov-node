@@ -16,12 +16,12 @@ new Moov(credentials, gotOptionsOrInstance)
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |
-| credentials |  object | API key credentials |
-| credentials.accountID |  string | Facilitator account ID |
-| credentials.publicKey |  string | Public key value from API key |
-| credentials.secretKey |  string | Secret key value from API key |
-| credentials.domain |  string | One of the domains from API key |
-| gotOptionsOrInstance |  object |  |
+| credentials |  `object` | API key credentials |
+| credentials.accountID |  `string` | Facilitator account ID |
+| credentials.publicKey |  `string` | Public key value from API key |
+| credentials.secretKey |  `string` | Secret key value from API key |
+| credentials.domain |  `string` | One of the domains from API key |
+| gotOptionsOrInstance |  `object` |  |
 
 
 

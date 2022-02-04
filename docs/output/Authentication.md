@@ -18,7 +18,7 @@ moov.generateToken(scopes, accountID)
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | scopes |  Array.<[SCOPES](#scopes)> | One or more permissions to request |
-| accountID |  string | Account on which to request permissions, default is faciliator account ID |
+| accountID |  `string` | Account on which to request permissions, default is faciliator account ID |
 
 
 
@@ -79,9 +79,9 @@ and client-side code to make calls to the Moov API.
 
 | Property | Type | Description |
 | ---- | ---- | ----------- |
-  | token | string| String token required by Moov API requests |
-  | expiresOn | Date| Date and time when the token expires |
-  | refreshToken | string| String used to refresh this token |
+  | token | `string`| String token required by Moov API requests |
+  | expiresOn | `Date`| Date and time when the token expires |
+  | refreshToken | `string`| String used to refresh this token |
 
 
 
@@ -90,8 +90,6 @@ and client-side code to make calls to the Moov API.
 ### SCOPES
 
 Available scopes to request on OAuth tokens.
-
-**Members**
 
 | Value | Description |
 | ----- | ----------- |
