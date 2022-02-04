@@ -4,7 +4,7 @@ const path = require("path");
 
 const handlebars = require("handlebars");
 var helpers = require('handlebars-helpers');
-var math = helpers.string();
+helpers.string();
 const _ = require("lodash");
 const { inspect } = require("util");
 const menuOrder = require("./menuOrder.cjs");
