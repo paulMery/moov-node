@@ -127,7 +127,6 @@ Describes a Moov account associated with an individual or a business.
 {{< tab title="Example">}}
 ```javascript
 {
-  "mode": "production",
   "accountType": "business",
   "profile": {
     "business": {
@@ -161,79 +160,6 @@ Describes a Moov account associated with an individual or a business.
       }
     }
   },
-  "metadata": {
-    "property1": "string",
-    "property2": "string"
-  },
-  "termsOfService": {
-    "token": "kgT1uxoMAk7QKuyJcmQE8nqW_HjpyuXBabiXPi6T83fUQoxsyWYPcYzuHQTqrt7YRp4gCwyDQvb6U5REM9Pgl2EloCe35t-eiMAbUWGo3Kerxme6aqNcKrP_6-v0MTXViOEJ96IBxPFTvMV7EROI2dq3u4e-x4BbGSCedAX-ViAQND6hcreCDXwrO6sHuzh5Xi2IzSqZHxaovnWEboaxuZKRJkA3dsFID6fzitMpm2qrOh4"
-  },
-  "foreignID": "4528aba-b9a1-11eb-8529-0242ac13003",
-  "customerSupport": {
-    "phone": {
-      "number": "8185551212",
-      "countryCode": "1"
-    },
-    "email": "amanda@classbooker.dev",
-    "address": {
-      "addressLine1": "123 Main Street",
-      "addressLine2": "Apt 302",
-      "city": "Boulder",
-      "stateOrProvince": "CO",
-      "postalCode": "80301",
-      "country": "US"
-    },
-    "website": "www.wholebodyfitnessgym.com"
-  },
-  "settings": {
-    "cardPayment": {
-      "statementDescriptor": "Whole Body Fitness"
-    }
-  }
-}
-```
-    {{</ tab>}}{{< tab title="Example">}}
-```javascript
-{
-  "mode": "production",
-  "accountType": "individual",
-  "profile": {
-    "individual": {
-      "name": {
-        "firstName": "Amanda",
-        "middleName": "Amanda",
-        "lastName": "Yang",
-        "suffix": "Jr"
-      },
-      "phone": {
-        "number": "8185551212",
-        "countryCode": "1"
-      },
-      "email": "amanda@classbooker.dev",
-      "address": {
-        "addressLine1": "123 Main Street",
-        "addressLine2": "Apt 302",
-        "city": "Boulder",
-        "stateOrProvince": "CO",
-        "postalCode": "80301",
-        "country": "US"
-      },
-      "birthDate": {
-        "day": 9,
-        "month": 11,
-        "year": 1989
-      },
-      "governmentID": {
-        "ssn": {
-          "full": "123-45-6789",
-          "lastFour": "6789"
-        },
-        "itin": {
-          "full": "123-45-6789",
-          "lastFour": "6789"
-        }
-      }
-    },
   "metadata": {
     "property1": "string",
     "property2": "string"
