@@ -31,8 +31,7 @@ Dashboard.
 
 Moov uses the [Got](https://github.com/sindresorhus/got) HTTP client
 library. If you need to access or customize the request-response pipeline,
-then provide customized options or an instance in the
-as an optional second parameter.
+then provide customized options or an instance in the `gotOptionsOrInstance` parameter.
 
 **Examples**
 
