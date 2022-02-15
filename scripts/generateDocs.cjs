@@ -297,7 +297,7 @@ function writeDataToTemplates(data) {
     try {
       fs.writeFileSync(outputPath, tagTemplate(apiDocs));
 
-      const localCopy = true;
+      const localCopy = false;
       if(localCopy){
         const pathToDocRepo = '/Users/scottmoov/Documents/projects/'; // Replace with path to cloned docs repo
         const localpath = 'docs/content/node/' + filename + '.md'
