@@ -91,6 +91,7 @@ and client-side code to make calls to the Moov API.
 
 Available scopes to request on OAuth tokens.
 
+{{< table >}}
 | Value | Description |
 | ----- | ----------- |
 | ACCOUNTS_CREATE | Allows a new Moov account to be created |
@@ -113,4 +114,5 @@ Available scopes to request on OAuth tokens.
 | WALLETS_READ | Access to view the balance on an account’s Moov wallet |
 | FED_READ | Allows a developer to use the institutions lookup service to look up a bank name by routing number |
 | PING | Ping Moov servers to test for connectivity |
+{{</ table >}}
 

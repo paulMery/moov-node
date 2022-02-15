@@ -110,6 +110,7 @@ Describes a Moov account associated with an individual or a business.
 
 {{< tabs>}}
   {{< tab title="Details">}}
+  {{< table >}}
 | Property | Type | Description |
 | ---- | ---- | ----------- |
 | mode |  `sandbox`,  `production` | Mode this account is allowed to be used within |
@@ -123,6 +124,7 @@ Describes a Moov account associated with an individual or a business.
 | settings |  [AccountSettings](#accountsettings) | Account settings |
 | createdOn |  `string` | Date account was created |
 | updatedOn |  `string` | Date account was last updated |
+{{</ table >}}
   {{< /tab>}}
 {{< tab title="Example">}}
 ```javascript
