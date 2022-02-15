@@ -13,7 +13,7 @@ new Moov(credentials, gotOptionsOrInstance)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | credentials |  `object` | API key credentials |
@@ -22,6 +22,7 @@ new Moov(credentials, gotOptionsOrInstance)
 | credentials.secretKey |  `string` | Secret key value from API key |
 | credentials.domain |  `string` | One of the domains from API key |
 | gotOptionsOrInstance |  `object` |  |
+{{</ table >}}
 
 
 

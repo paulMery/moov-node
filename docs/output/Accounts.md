@@ -14,10 +14,11 @@ accounts.create(account)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | account |  [Account](#account) | New account details |
+{{</ table >}}
 
 
 
@@ -37,10 +38,11 @@ accounts.get(connectedAccountID)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | connectedAccountID |  `string` | Account to query |
+{{</ table >}}
 
 
 
@@ -60,10 +62,11 @@ accounts.update(account)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | account |  [Account](#account) | Account to update |
+{{</ table >}}
 
 
 
@@ -84,10 +87,11 @@ accounts.patch(account)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | account |  [Account](#account) | Account to update |
+{{</ table >}}
 
 
 

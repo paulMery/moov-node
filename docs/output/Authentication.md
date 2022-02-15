@@ -14,11 +14,12 @@ moov.generateToken(scopes, accountID)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | scopes |  Array.<[SCOPES](#scopes)> | One or more permissions to request |
 | accountID |  `string` | Account on which to request permissions, default is faciliator account ID |
+{{</ table >}}
 
 
 
@@ -45,7 +46,7 @@ const token = await moov.generateToken([
 
 
 Pings the Moov servers to check for connectivity.
-See https://docs.moov.io/api/#tag/Ping.
+Read more about [/ping](/api/#tag/Ping).
 
 ```javascript
 moov.ping()
