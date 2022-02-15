@@ -45,7 +45,7 @@ const token = await moov.generateToken([
 
 
 Pings the Moov servers to check for connectivity.
-See https://docs.moov.io/api.
+See https://docs.moov.io/api/#tag/Ping.
 
 ```javascript
 moov.ping()
