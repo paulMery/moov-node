@@ -14,11 +14,12 @@ moov.generateToken(scopes, accountID)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | scopes |  Array.<[SCOPES](#scopes)> | One or more permissions to request |
 | accountID |  `string` | Account on which to request permissions, default is faciliator account ID |
+{{</ table >}}
 
 
 
@@ -45,7 +46,7 @@ const token = await moov.generateToken([
 
 
 Pings the Moov servers to check for connectivity.
-See https://docs.moov.io/api.
+Read more about [/ping](/api/#tag/Ping).
 
 ```javascript
 moov.ping()
@@ -91,6 +92,7 @@ and client-side code to make calls to the Moov API.
 
 Available scopes to request on OAuth tokens.
 
+{{< table >}}
 | Value | Description |
 | ----- | ----------- |
 | ACCOUNTS_CREATE | Allows a new Moov account to be created |
@@ -113,4 +115,5 @@ Available scopes to request on OAuth tokens.
 | WALLETS_READ | Access to view the balance on an account’s Moov wallet |
 | FED_READ | Allows a developer to use the institutions lookup service to look up a bank name by routing number |
 | PING | Ping Moov servers to test for connectivity |
+{{</ table >}}
 

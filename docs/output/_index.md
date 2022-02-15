@@ -13,7 +13,7 @@ new Moov(credentials, gotOptionsOrInstance)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | credentials |  `object` | API key credentials |
@@ -22,6 +22,7 @@ new Moov(credentials, gotOptionsOrInstance)
 | credentials.secretKey |  `string` | Secret key value from API key |
 | credentials.domain |  `string` | One of the domains from API key |
 | gotOptionsOrInstance |  `object` |  |
+{{</ table >}}
 
 
 
@@ -31,8 +32,7 @@ Dashboard.
 
 Moov uses the [Got](https://github.com/sindresorhus/got) HTTP client
 library. If you need to access or customize the request-response pipeline,
-then provide customized options or an instance in the
-as an optional second parameter.
+then provide customized options or an instance in the `gotOptionsOrInstance` parameter.
 
 **Examples**
 

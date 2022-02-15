@@ -14,10 +14,11 @@ transfers.create(transfer)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | transfer |  [Transfer](#transfer) | Subset of the Transfer object |
+{{</ table >}}
 
 
 
@@ -62,10 +63,11 @@ transfers.list(criteria)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | criteria |  [TransferListCriteria](#transferlistcriteria) |  |
+{{</ table >}}
 
 
 
@@ -105,10 +107,11 @@ transfers.get(transferID)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | transferID |  `string` |  |
+{{</ table >}}
 
 
 
@@ -140,11 +143,12 @@ transfers.updateMetadata(transferID, metadata)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | transferID |  `string` |  |
 | metadata |  `object` | Arbitrary key-value pairs |
+{{</ table >}}
 
 
 
@@ -179,10 +183,11 @@ transfers.getTransferOptions(transferOptionsCriteria)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | transferOptionsCriteria |  [TransferOptionsCriteria](#transferoptionscriteria) | Criteria for available payment options |
+{{</ table >}}
 
 
 
@@ -227,10 +232,11 @@ transfers.refund(transferID)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | transferID |  `string` |  |
+{{</ table >}}
 
 
 
@@ -262,10 +268,11 @@ transfers.listRefunds(transferID)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | transferID |  `string` |  |
+{{</ table >}}
 
 
 
@@ -297,11 +304,12 @@ transfers.getRefund(transferID, refundID)
 ```
 
 **Parameters**
-
+{{< table >}}
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | transferID |  `string` |  |
 | refundID |  `string` |  |
+{{</ table >}}
 
 
 
