@@ -3,6 +3,18 @@ title: "Node SDK"
 weight: 10
 ---
 
+## Installation
+You can download and install the node SDK from npm
+```
+npm i @moovio@node
+```
+
+Then import it into your project. 
+```javascript
+import { Moov } from "@moovio/node";
+
+```
+
 ## Moov
 
 

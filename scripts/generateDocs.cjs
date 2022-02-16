@@ -279,11 +279,13 @@ function writeDataToTemplates(data) {
 
     // Look for a template for this specific tag
     let tagContent = "{{apiDocs}}";
+    let usingTagTemplate = false;
     try {
       tagContent = fs.readFileSync(
         path.join(TAG_TEMPLATE_PATH, `${tag}.hbs`),
         "utf-8"
       );
+      usingTagTemplate = true;
     } catch {
       // Intentional no-op
     }
@@ -295,13 +297,13 @@ function writeDataToTemplates(data) {
     if(tag === 'Node SDK')filename = '_index';
     const outputPath = path.join(OUTPUT_PATH, `${filename}.md`);
     try {
-      fs.writeFileSync(outputPath, tagTemplate(apiDocs));
+      fs.writeFileSync(outputPath, tagTemplate(usingTagTemplate ? data[tag] : apiDocs));
 
       const localCopy = false;
       if(localCopy){
         const pathToDocRepo = '/Users/scottmoov/Documents/projects/'; // Replace with path to cloned docs repo
         const localpath = 'docs/content/node/' + filename + '.md'
-        fs.writeFileSync(pathToDocRepo + localpath, tagTemplate(apiDocs));
+        fs.writeFileSync(pathToDocRepo + localpath, tagTemplate(usingTagTemplate ? data[tag] : apiDocs));
       }
 
     } catch (err) {
