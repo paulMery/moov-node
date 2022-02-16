@@ -293,14 +293,14 @@ function writeDataToTemplates(data) {
     let filename =  tag; 
     // Rename Moov tag to index;
     if(tag === 'Node SDK')filename = '_index';
-    const outputPath = path.join(OUTPUT_PATH, `${filename}.md`);
+    const outputPath = path.join(OUTPUT_PATH, `${filename.toLowerCase()}.md`);
     try {
       fs.writeFileSync(outputPath, tagTemplate(apiDocs));
 
       const localCopy = false;
       if(localCopy){
         const pathToDocRepo = '/Users/scottmoov/Documents/projects/'; // Replace with path to cloned docs repo
-        const localpath = 'docs/content/node/' + filename + '.md'
+        const localpath = 'docs/content/node/' + filename.toLowerCase() + '.md'
         fs.writeFileSync(pathToDocRepo + localpath, tagTemplate(apiDocs));
       }
 
