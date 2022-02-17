@@ -295,7 +295,7 @@ function writeDataToTemplates(data) {
     let filename =  tag; 
     // Rename Moov tag to index;
     if(tag === 'Node SDK')filename = '_index';
-    const outputPath = path.join(OUTPUT_PATH, `${filename}.md`);
+    const outputPath = path.join(OUTPUT_PATH, `${filename.toLowerCase()}.md`);
     try {
       fs.writeFileSync(outputPath, tagTemplate(usingTagTemplate ? data[tag] : apiDocs));
 
