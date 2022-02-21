@@ -12,7 +12,6 @@ npm i @moovio@node
 Then import it into your project. 
 ```javascript
 import { Moov } from "@moovio/node";
-
 ```
 
 ## Moov
@@ -78,6 +77,30 @@ Gets the Accounts API.
 const moov = new Moov(...);
 try {
   await moov.accounts.create(...);
+} catch (err) {
+  // ...
+}
+```
+
+
+### Capabilities
+
+```javascript
+moov.capabilities
+```
+
+More on [capabilities](capabilities).
+
+Gets the Capabilities API.
+
+ 
+
+**Examples**
+
+```javascript
+const moov = new Moov(...);
+try {
+  await moov.capabilities.requestCapabilities(...);
 } catch (err) {
   // ...
 }
