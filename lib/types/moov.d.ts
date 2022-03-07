@@ -78,7 +78,7 @@ export class Moov {
         domain: string;
     };
     tokenCache: {};
-    got: any;
+    got: import("got").Got;
     _accounts: Accounts;
     _capabilities: Capabilities;
     _transfers: Transfers;
@@ -188,20 +188,35 @@ export class Moov {
      */
     get transfers(): Transfers;
     /**
-   * Gets the Wallets API.
-   * @returns {Wallets}
-   * @tag Moov
-   *
-   * @example
-   * const moov = new Moov(...);
-   * try {
-   *   await moov.wallets.get(...);
-   * } catch (err) {
-   *   // ...
-   * }
-   */
+     * Gets the Wallets API.
+     * @returns {Wallets}
+     * @tag Moov
+     *
+     * @example
+     * const moov = new Moov(...);
+     * try {
+     *   await moov.wallets.get(...);
+     * } catch (err) {
+     *   // ...
+     * }
+     */
     get wallets(): Wallets;
     _wallets: Wallets;
+    /**
+     * Gets the Avatars API.
+     * @returns {Avatars}
+     * @tag Moov
+     *
+     * @example
+     * const moov = new Moov(...);
+     * try {
+     *   await moov.avatars.get(...);
+     * } catch (err) {
+     *   // ...
+     * }
+     */
+    get avatars(): Avatars;
+    _avatars: Avatars;
     /**
      * Gets a cached token or creates a new one.
      * @param {string} accountID - Account identifier
@@ -234,4 +249,5 @@ import { Transfers } from "./transfers.js";
 import { BankAccounts } from "./bankAccounts.js";
 import { PaymentMethods } from "./paymentMethods.js";
 import { Wallets } from "./wallets.js";
+import { Avatars } from "./avatars.js";
 //# sourceMappingURL=moov.d.ts.map

@@ -203,6 +203,30 @@ try {
 ```
 
 
+### Avatars
+
+```javascript
+moov.avatars
+```
+
+More on [avatars](avatars).
+
+Gets the Avatars API.
+
+ 
+
+**Examples**
+
+```javascript
+const moov = new Moov(...);
+try {
+  await moov.avatars.get(...);
+} catch (err) {
+  // ...
+}
+```
+
+
 
 
 
