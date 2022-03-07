@@ -188,18 +188,18 @@ export class Moov {
      */
     get transfers(): Transfers;
     /**
-   * Gets the Wallets API.
-   * @returns {Wallets}
-   * @tag Moov
-   *
-   * @example
-   * const moov = new Moov(...);
-   * try {
-   *   await moov.wallets.get(...);
-   * } catch (err) {
-   *   // ...
-   * }
-   */
+     * Gets the Wallets API.
+     * @returns {Wallets}
+     * @tag Moov
+     *
+     * @example
+     * const moov = new Moov(...);
+     * try {
+     *   await moov.wallets.get(...);
+     * } catch (err) {
+     *   // ...
+     * }
+     */
     get wallets(): Wallets;
     _wallets: Wallets;
     /**

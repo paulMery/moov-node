@@ -10,10 +10,10 @@ export class Avatars {
      */
     private moov;
     /**
-     * Gets a binary string representing an avatar.
+     * Gets a binary represention of an avatar.
      *
      * @param {string} uniqueId - Any unique ID associated with an account such as AccountID, RepresentativeID, Routing Number, or User ID
-     * @returns {Promise<string<binary>>} - Binary representation of the avatar.
+     * @returns {Promise<Blob>} - Binary representation of the avatar.
      * @tag Avatars
      *
      * @example
@@ -24,6 +24,6 @@ export class Avatars {
      *   // ...
      * }
      */
-    get(uniqueId: string): Promise<string>;
+    get(uniqueId: string): Promise<Blob>;
 }
 //# sourceMappingURL=avatars.d.ts.map

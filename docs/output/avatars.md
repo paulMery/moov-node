@@ -7,7 +7,7 @@ weight: 130
 ## Get
 
 
-Gets a binary string representing an avatar.
+Gets a binary represention of an avatar.
 
 ```javascript
 avatars.get(uniqueId)
@@ -24,7 +24,7 @@ avatars.get(uniqueId)
 
 **Returns**
 
-`Promise.<string.<binary>>`
+`Promise.<Blob>`
 
 
 
