@@ -10,5 +10,6 @@ module.exports = [
     "Transfers",
     "Wallets",
     "Institutions",
-    "Enrichment"
+    "Enrichment",
+    "Avatars"
 ]

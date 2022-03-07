@@ -78,7 +78,7 @@ export class Moov {
         domain: string;
     };
     tokenCache: {};
-    got: any;
+    got: import("got").Got;
     _accounts: Accounts;
     _capabilities: Capabilities;
     _transfers: Transfers;
