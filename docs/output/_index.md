@@ -155,6 +155,54 @@ try {
 ```
 
 
+### EnrichedAddresses
+
+```javascript
+moov.enrichedAddresses
+```
+
+More on [enrichedAddresses](enrichedAddresses).
+
+Gets the Enriched Address API.
+
+ 
+
+**Examples**
+
+```javascript
+const moov = new Moov(...);
+try {
+  await moov.enrichedAddresses.get(...);
+} catch (err) {
+  // ...
+}
+```
+
+
+### EnrichedProfiles
+
+```javascript
+moov.enrichedProfiles
+```
+
+More on [enrichedProfiles](enrichedProfiles).
+
+Gets the Enriched Profile API.
+
+ 
+
+**Examples**
+
+```javascript
+const moov = new Moov(...);
+try {
+  await moov.enrichedProfiles.get(...);
+} catch (err) {
+  // ...
+}
+```
+
+
 ### PaymentMethods
 
 ```javascript
