@@ -7,7 +7,7 @@
  * @property {string} postalCode
  * @property {number} entries
  *
- * @tag EnrichedAddresses
+ * @tag Enrichment
  */
 /**
  * @typedef EnrichedAddressGetCriteria
@@ -25,11 +25,11 @@
  * @property {string} [selected] - Optional Useful for narrowing results with addressLine2 suggestions such as Apt (denotes an apartment building with multiple residences). Example: "Apt"
  * @property {"all"|"postal"} [source] - Optional Include results from alternate data sources. Allowed values are -- all (non-postal addresses) or postal (postal addresses only).
  *
- * @tag EnrichedAddresses
+ * @tag Enrichment
  * */
 /**
  * The Enriched Address API.
- * @tag EnrichedAddresses
+ * @tag Enrichment
  */
 export class EnrichedAddresses {
     constructor(moov: any);
@@ -43,7 +43,7 @@ export class EnrichedAddresses {
      *
      * @param {EnrichedAddressGetCriteria} criteria - Criterial for available search parameters.
      * @returns {Promise<EnrichedAddress[]>}
-     * @tag EnrichedAddresses
+     * @tag Enrichment
      *
      * @example
      * const moov = new Moov(...);
