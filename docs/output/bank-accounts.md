@@ -158,6 +158,92 @@ bankaccounts.completeMicroDeposits(accountID, bankAccountID)
 
 
 
+## Types
+### BankAccount
+
+Describes a Bank Account.
+
+**Properties**
 
 
+{{< tabs>}}
+  {{< tab title="Details">}}
+  {{< table >}}
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+| bankAccountID |  `string` | Bank Account identifier |
+| fingerprint |  `string` | Fingerprint of Bank Account |
+| status |  [BANK_ACCOUNT_STATUS](#bank_account_status) | The bank account status |
+| holderName |  `string` | Name of the bank account holder |
+| holderType |  [BANK_ACCOUNT_HOLDER_TYPE](#bank_account_holder_type) | The type of holder on a funding source |
+| bankName |  `string` | Name of the bank |
+| bankAccountType |  [BANK_ACCOUNT_TYPE](#bank_account_type) | The bank account type |
+| routingNumber |  `string` | Bank account routing number |
+| lastFourAccountNumber |  `string` | Last four digits of the bank account number |
+{{</ table >}}
+  {{< /tab>}}
+{{< tab title="Example">}}
+```javascript
+{
+  "bankAccountID": "ec7e1848-dc80-4ab0-8827-dd7fc0737b43",
+  "fingerprint": "9948962d92a1ce40c9f918cd9ece3a22bde62fb325a2f1fe2e833969de672ba3",
+  "status": "new",
+  "holderName": "Jules Jackson",
+  "holderType": "individual",
+  "bankName": "Chase Bank",
+  "bankAccountType": "checking",
+  "routingNumber": "string",
+  "lastFourAccountNumber": "7000"
+}
+```
+    {{</ tab>}}{{</ tabs>}}
+
+
+
+
+### BankAccountAdd
+
+Describes a Bank Account to be added.
+
+**Properties**
+
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+  | holderName | `string`| Name of the bank account holder |
+  | holderType | [BANK_ACCOUNT_HOLDER_TYPE](#bank_account_holder_type)| The type of holder on a funding source |
+  | routingNumber | `string`| Bank account routing number |
+  | accountNumber | `string`| The bank account number |
+  | bankAccountType | [BANK_ACCOUNT_TYPE](#bank_account_type)| The bank account type |
+
+
+
+
+## Enums
+### BANK_ACCOUNT_STATUS
+
+
+
+{{< table >}}
+| Value | Description |
+| ----- | ----------- |
+| NEW | Bank Account is created and waiting on verification. |
+{{</ table >}}
+
+### BANK_ACCOUNT_HOLDER_TYPE
+
+
+
+{{< table >}}
+| Value | Description |
+| ----- | ----------- |
+{{</ table >}}
+
+### BANK_ACCOUNT_TYPE
+
+
+
+{{< table >}}
+| Value | Description |
+| ----- | ----------- |
+{{</ table >}}
 
