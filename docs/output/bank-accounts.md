@@ -1,6 +1,6 @@
 ---
-title: "BankAccounts"
-weight: 0
+title: "Bank accounts"
+weight: 60
 ---
 
 

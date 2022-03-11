@@ -3,7 +3,7 @@
  * @property {EnrichedIndividualProfile} individual - Describes a person
  * @property {EnrichedBusinessProfile} business - Describes a company
  *
- * @tag EnrichedProfiles
+ * @tag Enrichment
  */
 /**
  * @typedef EnrichedBusinessProfile
@@ -14,7 +14,7 @@
  * @property {EnrichedProfileIndustry} industryCodes - Describes industry specific identifiers
  * @property {string} website
  *
- * @tag EnrichedProfiles
+ * @tag Enrichment
  */
 /**
  * @typedef EnrichedIndividualProfile
@@ -22,7 +22,7 @@
  * @property {string} email
  * @property {EnrichedProfileAddress} address
  *
- * @tag EnrichedProfiles
+ * @tag Enrichment
  */
 /**
  * @typedef EnrichedProfileAddress
@@ -33,14 +33,14 @@
  * @property {string} postalCode
  * @property {country} country
  *
- * @tag EnrichedProfiles
+ * @tag Enrichment
  */
 /**
  * @typedef EnrichedProfileIndustry - Describes industry specific identifiers
  * @property {string} naics
  * @property {string} sic
  *
- * @tag EnrichedProfiles
+ * @tag Enrichment
  */
 /**
  * @typedef EnrichedProfileName
@@ -49,18 +49,18 @@
  * @property {string} lastName
  * @property {string} suffix
  *
- * @tag EnrichedProfiles
+ * @tag Enrichment
  */
 /**
  * @typedef EnrichedProfilePhone
  * @property {string} number
  * @property {string} countryCode
  *
- * @tag EnrichedProfiles
+ * @tag Enrichment
  */
 /**
  * The Enriched Profile API.
- * @tag EnrichedProfiles
+ * @tag Enrichment
  */
 export class EnrichedProfiles {
     constructor(moov: any);
@@ -74,7 +74,7 @@ export class EnrichedProfiles {
      *
      * @param {string} email - Email address associated with the profile.
      * @returns {Promise<EnrichedProfile>}
-     * @tag EnrichedProfiles
+     * @tag Enrichment
      *
      * @example
      * const moov = new Moov(...);

@@ -1,7 +1,7 @@
 /** @external Promise */
 /**
  * The Bank Accounts API
- * @tag BankAccounts
+ * @tag Bank accounts
  */
 export class BankAccounts {
     constructor(moov: any);
@@ -15,7 +15,7 @@ export class BankAccounts {
      * @param {string} [mxAuthorizationCode] - Optional Plaid processor authorization code
      * @returns {Promise<BankAccount>}
      *
-     * @tag BankAccounts
+     * @tag Bank accounts
      */
     link(accountID: string, bankAccount?: BankAccountAdd, plaidToken?: string, mxAuthorizationCode?: string): Promise<BankAccount>;
     /**
@@ -25,7 +25,7 @@ export class BankAccounts {
      * @param {string} bankAccountID - ID of the bank account to retrieve
      * @returns {Promise<BankAccount>}
      *
-     * @tag BankAccounts
+     * @tag Bank accounts
      */
     get(accountID: string, bankAccountID: string): Promise<BankAccount>;
     /**
@@ -34,7 +34,7 @@ export class BankAccounts {
      * @param {string} accountID - Account on which to request bank account
      * @returns {Promise<BankAccount[]>}
      *
-     * @tag BankAccounts
+     * @tag Bank accounts
      */
     list(accountID: string): Promise<BankAccount[]>;
     /**
@@ -44,7 +44,7 @@ export class BankAccounts {
      * @param {string} bankAccountID - ID of the bank account to disable
      * @returns {Promise<void>}
      *
-     * @tag BankAccounts
+     * @tag Bank accounts
      */
     disable(accountID: string, bankAccountID: string): Promise<void>;
     /**
@@ -54,7 +54,7 @@ export class BankAccounts {
      * @param {string} bankAccountID - ID of the bank account to disable
      * @returns {Promise<void>}
      *
-     * @tag BankAccounts
+     * @tag Bank accounts
      */
     initMicroDeposits(accountID: string, bankAccountID: string): Promise<void>;
     /**
@@ -64,7 +64,7 @@ export class BankAccounts {
      * @param {string} bankAccountID - ID of the bank account to disable
      * @returns {Promise<void>}
      *
-     * @tag BankAccounts
+     * @tag Bank accounts
      */
     completeMicroDeposits(accountID: string, bankAccountID: string, amounts: any): Promise<void>;
 }

@@ -1,6 +1,6 @@
 ---
-title: "EnrichedAddresses"
-weight: 0
+title: "Enrichment"
+weight: 120
 ---
 
 
@@ -40,6 +40,44 @@ try {
   }); 
 } catch (err) {
   // ...
+}
+```
+
+
+
+
+## Get
+
+
+Gets enriched profile data.
+
+```javascript
+enrichedprofiles.get(email)
+```
+
+**Parameters**
+{{< table >}}
+| Name | Type | Description |
+| ---- | ---- | ----------- |
+| email |  `string` | Email address associated with the profile. |
+{{</ table >}}
+
+
+
+**Returns**
+
+`Promise.<EnrichedProfile>`
+
+
+
+**Examples**
+
+```javascript
+const moov = new Moov(...);
+try {
+  const enrichedProfile = moov.enrichedProfiles.get("employee@business.com");
+} catch (err) {
+  // ..
 }
 ```
 
@@ -86,6 +124,108 @@ try {
   | preferGeolocation | `none`,  `city`| Optional If omitted or set to city it uses the sender's IP address to determine location, then automatically adds the city and state to the preferCities value. This parameter takes precedence over other include or exclude parameters meaning that if it is not set to none you may see addresses from areas you do not wish to see. Example: "city" |
   | selected | `string`| Optional Useful for narrowing results with addressLine2 suggestions such as Apt (denotes an apartment building with multiple residences). Example: "Apt" |
   | source | `all`,  `postal`| Optional Include results from alternate data sources. Allowed values are -- all (non-postal addresses) or postal (postal addresses only). |
+
+
+
+### EnrichedProfile
+
+
+
+**Properties**
+
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+  | individual | [EnrichedIndividualProfile](#enrichedindividualprofile)| Describes a person |
+  | business | [EnrichedBusinessProfile](#enrichedbusinessprofile)| Describes a company |
+
+
+
+### EnrichedBusinessProfile
+
+
+
+**Properties**
+
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+  | legalBusinessName | `string`|  |
+  | address | [EnrichedProfileAddress](#enrichedprofileaddress)|  |
+  | email | `string`|  |
+  | phone | [EnrichedProfilePhone](#enrichedprofilephone)|  |
+  | industryCodes | [EnrichedProfileIndustry](#enrichedprofileindustry)| Describes industry specific identifiers |
+  | website | `string`|  |
+
+
+
+### EnrichedIndividualProfile
+
+
+
+**Properties**
+
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+  | name | [EnrichedProfileName](#enrichedprofilename)|  |
+  | email | `string`|  |
+  | address | [EnrichedProfileAddress](#enrichedprofileaddress)|  |
+
+
+
+### EnrichedProfileAddress
+
+
+
+**Properties**
+
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+  | addressLine1 | `string`|  |
+  | addressLine2 | `string`|  |
+  | city | `string`|  |
+  | stateOrProvince | `string`|  |
+  | postalCode | `string`|  |
+  | country | `country`|  |
+
+
+
+### EnrichedProfileIndustry
+
+
+
+**Properties**
+
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+  | naics | `string`|  |
+  | sic | `string`|  |
+
+
+
+### EnrichedProfileName
+
+
+
+**Properties**
+
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+  | firstName | `string`|  |
+  | middleName | `string`|  |
+  | lastName | `string`|  |
+  | suffix | `string`|  |
+
+
+
+### EnrichedProfilePhone
+
+
+
+**Properties**
+
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+  | number | `string`|  |
+  | countryCode | `string`|  |
 
 
 

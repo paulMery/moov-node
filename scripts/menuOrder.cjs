@@ -6,7 +6,7 @@ module.exports = [
     "Capabilities",
     "Bank accounts",
     "Cards",
-    "Payment Methods",
+    "Payment methods",
     "Transfers",
     "Wallets",
     "Institutions",
