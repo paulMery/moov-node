@@ -227,6 +227,10 @@ Describes a Bank Account to be added.
 | Value | Description |
 | ----- | ----------- |
 | NEW | Bank Account is created and waiting on verification. |
+| VERIFIED | Bank Account is verified and ready for use. |
+| VERIFICATION_FAILED | Bank Account verfiication failed. |
+| PENDING | Bank Account is pending approval. |
+| ERRORED | Bank Account is in an errored state. |
 {{</ table >}}
 
 ### BANK_ACCOUNT_HOLDER_TYPE
@@ -236,6 +240,8 @@ Describes a Bank Account to be added.
 {{< table >}}
 | Value | Description |
 | ----- | ----------- |
+| INDIVIDUAL | Bank Account holder is a type of individual. |
+| BUSINESS | Bank Account holder is a type of individual. |
 {{</ table >}}
 
 ### BANK_ACCOUNT_TYPE
@@ -245,5 +251,8 @@ Describes a Bank Account to be added.
 {{< table >}}
 | Value | Description |
 | ----- | ----------- |
+| CHECKING | Bank Account is a type of checking. |
+| SAVINGS | Bank Account is a type of savings. |
+| UNKNOWN | Bank Account is a type of unknown. |
 {{</ table >}}
 
