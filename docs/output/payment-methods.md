@@ -1,5 +1,5 @@
 ---
-title: "Payment Methods"
+title: "Payment methods"
 weight: 80
 ---
 
