@@ -2,6 +2,7 @@
 title: "Institutions"
 weight: 110
 ---
+Lookup ACH and wire participating financial institutions. We recommend using this endpoint when an end-user enters a routing number to confirm their bank or credit union.
 
 
 ## GetACHInstitution
