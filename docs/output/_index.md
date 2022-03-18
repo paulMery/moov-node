@@ -5,7 +5,7 @@ weight: 10
 
 ## Overview
 
-The Moov Node SDK allows you to interact with the Moov API from applications written in server-side JavaScript. With our Node library, you can make API calls with fewer lines of code and move money faster.
+This Node SDK provides access to Moov's API from applications written in server-side JavaScript. Use this library to reduce the lines of code needed interact with our platform, saving time and allowing you to move money faster.
 
 ## Installation
 You can download and install the Node SDK from npm.
@@ -13,7 +13,7 @@ You can download and install the Node SDK from npm.
 npm i @moovio@node
 ```
 
-After you've installed the Node SDK, import it into your project. 
+Then import it into your project. 
 ```javascript
 import { Moov } from "@moovio/node";
 ```

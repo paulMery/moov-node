@@ -1,0 +1,29 @@
+---
+title: "{{name}}"
+weight: {{weight}}
+---
+
+Every Moov account automatically comes with a Moov wallet, which serves as a funding source as you accumulate funds. You can also use the Moov wallet to:
+
+- Pre-fund transfers for faster payouts
+- Transfer funds between Moov wallets for instantly available funds
+
+At this time, wallets can't be manually created, deleted or modified. They are read-only and are automatically created when a Moov account is associated with an application. For more context, read our guide on [wallets](guides/sources/wallet/).
+
+{{#each classes}}
+  {{~>class}}
+{{/each}}
+
+{{#each functions}}
+  {{~>function}}
+{{/each}}
+
+{{#if types}}## Types{{/if}}
+{{#each types}}
+  {{~>type}}
+{{/each}}
+
+{{#if enums}}## Enums{{/if}}
+{{#each enums}}
+  {{~>enumlist}}
+{{/each}}
