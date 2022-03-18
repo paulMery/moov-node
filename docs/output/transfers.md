@@ -3,6 +3,8 @@ title: "Transfers"
 weight: 90
 ---
 
+A transfer is the movement of money between Moov accounts, from source to destination. Provided you have linked a bank account which has been verified, you can initiate a transfer to another Moov account. For more context, read our [guide on transfers](/guides/money-movement).
+
 
 ## Create
 
