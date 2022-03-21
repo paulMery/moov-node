@@ -2,6 +2,7 @@
 title: "Accounts"
 weight: 30
 ---
+Accounts represent a legal entity (either a business or an individual) in Moov. You can create an account for yourself or set up accounts for others. You can retrieve an account to get details on the business or individual account holder, such as an email address or employer identification number (EIN). For more context, read our guides on [Moov accounts](/guides/accounts).
 
 
 ## Create

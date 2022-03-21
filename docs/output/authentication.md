@@ -7,7 +7,7 @@ weight: 20
 ## GenerateToken
 
 
-Generates an OAuth token required by Moov API requests.
+Generates an OAuth token required by Moov API requests. For more on our authentication protocol, read our [quick start guide](/guides/quick-start/#create-an-access-token).
 
 ```javascript
 moov.generateToken(scopes, accountID)
@@ -27,8 +27,8 @@ moov.generateToken(scopes, accountID)
 
 `Promise.<Token>`
 
-You only need call this function when generating tokens for Moov.js and
-Moov Drops. The other functions in this library generate tokens for you
+You only need call this function when generating tokens for [Moov.js](/moovjs) and
+[Moov Drops](/moovjs/drops). The other functions in this library generate tokens for you
 automatically.
 
 **Examples**

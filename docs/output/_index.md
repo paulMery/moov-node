@@ -3,8 +3,12 @@ title: "Node SDK"
 weight: 10
 ---
 
+## Overview
+
+This Node SDK provides access to Moov's API from applications written in server-side JavaScript. Use this library to reduce the lines of code needed interact with our platform, saving time and allowing you to move money faster.
+
 ## Installation
-You can download and install the node SDK from npm
+You can download and install the Node SDK from npm.
 ```
 npm i @moovio@node
 ```
@@ -65,7 +69,7 @@ const moov = new Moov({
 moov.accounts
 ```
 
-More on [accounts](accounts).
+Read more on [accounts](accounts) in the Moov Node SDK.
 
 Gets the Accounts API.
 
@@ -89,7 +93,7 @@ try {
 moov.avatars
 ```
 
-More on [avatars](avatars).
+Read more on [avatars](avatars) in the Moov Node SDK.
 
 Gets the Avatars API.
 
@@ -113,7 +117,7 @@ try {
 moov.bankAccounts
 ```
 
-More on [bankAccounts](bankAccounts).
+Read more on [bankAccounts](bankAccounts) in the Moov Node SDK.
 
 Gets the Bank Accounts API.
 
@@ -137,7 +141,7 @@ try {
 moov.capabilities
 ```
 
-More on [capabilities](capabilities).
+Read more on [capabilities](capabilities) in the Moov Node SDK.
 
 Gets the Capabilities API.
 
@@ -185,7 +189,7 @@ try {
 moov.enrichedAddresses
 ```
 
-More on [enrichedAddresses](enrichedAddresses).
+Read more on [enrichedAddresses](enrichedAddresses) in the Moov Node SDK.
 
 Gets the Enriched Address API.
 
@@ -209,7 +213,7 @@ try {
 moov.enrichedProfiles
 ```
 
-More on [enrichedProfiles](enrichedProfiles).
+Read more on [enrichedProfiles](enrichedProfiles) in the Moov Node SDK.
 
 Gets the Enriched Profile API.
 
@@ -233,7 +237,7 @@ try {
 moov.paymentMethods
 ```
 
-More on [paymentMethods](paymentMethods).
+Read more on [paymentMethods](paymentMethods) in the Moov Node SDK.
 
 Gets the Payment Methods API.
 
@@ -257,7 +261,7 @@ try {
 moov.institutions
 ```
 
-More on [institutions](institutions).
+Read more on [institutions](institutions) in the Moov Node SDK.
 
 Gets the Institutions API.
 
@@ -281,7 +285,7 @@ try {
 moov.transfers
 ```
 
-More on [transfers](transfers).
+Read more on [transfers](transfers) in the Moov Node SDK.
 
 Gets the Transfers API.
 
@@ -305,7 +309,7 @@ try {
 moov.wallets
 ```
 
-More on [wallets](wallets).
+Read more on [wallets](wallets) in the Moov Node SDK.
 
 Gets the Wallets API.
 

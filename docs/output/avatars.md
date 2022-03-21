@@ -2,6 +2,7 @@
 title: "Avatars"
 weight: 130
 ---
+You can retrieve an account's profile image. This is especially useful if you'd like to use the profile image for a corresponding account in your own product.
 
 
 ## Get
