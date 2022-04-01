@@ -1,0 +1,31 @@
+name: Pull Request
+
+on:
+  push:
+    branches: ["main"]
+  pull_request: {}
+
+jobs:
+  changedfiles:
+    name: Publish to docs
+    runs-on: [self-hosted, services]
+    outputs:
+      all: ${{ steps.changes.outputs.all}}
+    steps:
+
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Check Changes
+        run: |
+          echo "::set-output name=all::$(git diff --name-only --diff-filter=ACMRT ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs)
+  
+  prdocs:
+    name: PR to Docs Repo
+    needs: changedfiles
+    runs-on: [self-hosted, services]
+    steps:
+
+      - name: Create pull Request
+        run: |
+          echo ${{needs.changedfiles.outputs.all}}
