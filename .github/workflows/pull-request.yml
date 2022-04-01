@@ -8,7 +8,7 @@ on:
 jobs:
   changedfiles:
     name: Publish to docs
-    runs-on: [self-hosted, services]
+    runs-on: [ubuntu-latest]
     outputs:
       all: ${{ steps.changes.outputs.all}}
     steps:
@@ -23,7 +23,7 @@ jobs:
   prdocs:
     name: PR to Docs Repo
     needs: changedfiles
-    runs-on: [self-hosted, services]
+    runs-on: [ubuntu-latest]
     steps:
 
       - name: Create pull Request
