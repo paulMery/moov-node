@@ -30,4 +30,4 @@ jobs:
 
       - name: Create pull Request
         run: |
-          echo ${{needs.changedfiles.outputs.all}}
+          echo "${{needs.changedfiles.outputs.all}}"
