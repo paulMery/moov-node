@@ -11,6 +11,7 @@ jobs:
     runs-on: [ubuntu-latest]
     outputs:
       all: ${{ steps.changes.outputs.all}}
+      sha: ${{ steps.changes.outputs.sha}}
     steps:
 
       - name: Checkout Repo
@@ -19,8 +20,10 @@ jobs:
           fetch-depth: 0
 
       - name: Check Changes
+        id: changes
         run: |
-          echo "::set-output name=all::$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs)"
+          echo "::set-output name=sha::$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs)"
+          echo "::set-output name=all::$(git diff --name-only main | xargs)"
   
   prdocs:
     name: PR to Docs Repo
@@ -31,3 +34,4 @@ jobs:
       - name: Create pull Request
         run: |
           echo "${{needs.changedfiles.outputs.all}}"
+          echo "${{needs.changedfiles.outputs.sha}}"
