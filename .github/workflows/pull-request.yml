@@ -23,7 +23,7 @@ jobs:
         run: |
           echo "::set-output name=all::$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs | grep -o "docs/")"
   
-  prdocs:
+  runs:
     name: PR to Docs Repo
     # echo "${{needs.changedfiles.outputs.all}}"
     needs: changedfiles
@@ -37,6 +37,3 @@ jobs:
       INPUT_USER_USER_NAME: "mvienneau"
       INPUT_DESITINATION_REPO: "moovfinancial/docs"
       INPUT_DESTINATION_FOLDER: "content/node/"
-    runs:
-      using: 'docker'
-      image: 'Dockerfile'
