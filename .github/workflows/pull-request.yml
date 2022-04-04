@@ -25,11 +25,18 @@ jobs:
   
   prdocs:
     name: PR to Docs Repo
+    # echo "${{needs.changedfiles.outputs.all}}"
     needs: changedfiles
     if: ${{needs.changedfiles.outputs.all}}
     runs-on: [ubuntu-latest]
-    steps:
-
-      - name: Create pull Request
-        run: |
-          echo "${{needs.changedfiles.outputs.all}}"
+    env:
+      API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      INPUT_SOURCE_FOLDER: "docs/output/"
+      INPUT_DESTINATION_HEAD_BRANCH: ${{ github.event.pull_request.base.sha }}
+      INPUT_USER_EMAIL: "michael.vienneau@colorado.edu"
+      INPUT_USER_USER_NAME: "mvienneau"
+      INPUT_DESITINATION_REPO: "moovfinancial/docs"
+      INPUT_DESTINATION_FOLDER: "content/node/"
+    runs:
+      using: 'docker'
+      image: 'Dockerfile'
