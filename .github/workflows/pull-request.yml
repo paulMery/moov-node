@@ -10,7 +10,7 @@ jobs:
     name: Publish to docs
     runs-on: [ubuntu-latest]
     outputs:
-      all: ${{ steps.changes.outputs.all}}
+      all: ${{ steps.changes.outputs.all }}
     steps:
 
       - name: Checkout Repo
@@ -22,18 +22,16 @@ jobs:
         id: changes
         run: |
           echo "::set-output name=all::$(git diff --name-only ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs | grep -o "docs/")"
+
+      - name: Create pull request
+        uses: ./
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source_folder: 'docs/output/'
+          destination_repo: 'moovfinancial/docs'
+          destination_folder: 'content/node/'
+          destination_head_branch: ${{ github.event.pull_request.base.sha }}
+          user_email: 'michael.vienneau@colorado.edu'
+          user_name: 'mvienneau'
   
-  runs:
-    name: PR to Docs Repo
-    # echo "${{needs.changedfiles.outputs.all}}"
-    needs: changedfiles
-    if: ${{needs.changedfiles.outputs.all}}
-    runs-on: [ubuntu-latest]
-    env:
-      API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-      INPUT_SOURCE_FOLDER: "docs/output/"
-      INPUT_DESTINATION_HEAD_BRANCH: ${{ github.event.pull_request.base.sha }}
-      INPUT_USER_EMAIL: "michael.vienneau@colorado.edu"
-      INPUT_USER_USER_NAME: "mvienneau"
-      INPUT_DESITINATION_REPO: "moovfinancial/docs"
-      INPUT_DESTINATION_FOLDER: "content/node/"
