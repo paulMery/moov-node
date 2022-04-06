@@ -52,7 +52,7 @@ then
   echo "Creating a pull request"
   gh pr create -t "Auto PR from moov-node changes" \
                -b "Syncing change from moov-node to docs" \
-               -B "master" \
+               -B "main" \
                -H $INPUT_DESTINATION_HEAD_BRANCH 
 else
   echo "No changes detected"
