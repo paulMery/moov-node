@@ -28,7 +28,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source_folder: 'docs/output'
+          source_folder: 'docs/output/*'
           destination_repo: 'moovfinancial/docs'
           destination_folder: 'content/node'
           # destination_head_branch: $(date "+%s")
