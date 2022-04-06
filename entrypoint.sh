@@ -3,7 +3,7 @@
 set -e
 set -x
 
-export INPUT_DESTINATION_HEAD_BRANCH=$(date "+%s")
+export INPUT_DESTINATION_HEAD_BRANCH=$INPUT_HEAD_BRANCH
 
 if [ -z "$INPUT_SOURCE_FOLDER" ]
 then

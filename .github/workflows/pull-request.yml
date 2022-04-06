@@ -31,7 +31,7 @@ jobs:
           source_folder: 'docs/output/*'
           destination_repo: 'moovfinancial/docs'
           destination_folder: 'content/node'
-          # destination_head_branch: $(date "+%s")
           user_email: 'michael.vienneau@colorado.edu'
           user_name: 'mvienneau'
+          head_branch: ${{ github.head_ref }}
   
