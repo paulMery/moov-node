@@ -34,4 +34,5 @@ jobs:
           user_email: 'michael.vienneau@colorado.edu'
           user_name: 'mvienneau'
           head_branch: ${{ github.head_ref }}
+          pull_request_number: ${{ github.event.number }}
   

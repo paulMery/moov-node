@@ -27,6 +27,8 @@ fi
 NODE_DIR=$(pwd)
 CLONE_DIR=$(mktemp -d)
 
+PR_URL="https://github.com/moovfinancial/moov-node/pull/$INPUT_PULL_REQUEST_NUMBER"
+
 echo "Setting git variables"
 export GITHUB_TOKEN=$API_TOKEN_GITHUB
 git config --global user.email "$INPUT_USER_EMAIL"
@@ -57,7 +59,7 @@ then
   if [ $(gh pr list -H $INPUT_DESTINATION_HEAD_BRANCH | wc -l) -eq 0 ]
   then
     gh pr create -t "Auto PR from moov-node changes" \
-                -b "Syncing change from moov-node to docs" \
+                -b "Syncing changes from [moov-node PR]($PR_URL)" \
                 -B "main" \
                 -H $INPUT_DESTINATION_HEAD_BRANCH 
   else
