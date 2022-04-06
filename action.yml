@@ -18,7 +18,7 @@ inputs:
     required: true
   destination_head_branch:
     description: 'The branch to create to push the changes. Cannot be master or main'
-    required: true
+    required: false
   destination_base_branch:
     description: 'The branch into which you want your code merged.'
     required: false

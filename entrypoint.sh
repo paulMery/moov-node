@@ -3,6 +3,8 @@
 set -e
 set -x
 
+export DESTINATION_HEAD_BRANCH=$(date "+%s")
+
 if [ -z "$INPUT_SOURCE_FOLDER" ]
 then
   echo "Source folder must be defined"
