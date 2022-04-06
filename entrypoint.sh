@@ -54,10 +54,15 @@ then
   echo "Pushing git commit"
   git push origin $INPUT_DESTINATION_HEAD_BRANCH
   echo "Creating a pull request"
-  gh pr create -t "Auto PR from moov-node changes" \
-               -b "Syncing change from moov-node to docs" \
-               -B "main" \
-               -H $INPUT_DESTINATION_HEAD_BRANCH 
+  if [ $(gh pr list -H $INPUT_DESTINATION_HEAD_BRANCH | wc -l) -eq 0 ]
+  then
+    gh pr create -t "Auto PR from moov-node changes" \
+                -b "Syncing change from moov-node to docs" \
+                -B "main" \
+                -H $INPUT_DESTINATION_HEAD_BRANCH 
+  else
+    echo "PR Already Created"
+  fi
 else
   echo "No changes detected"
 fi
