@@ -42,7 +42,7 @@ echo "Creating Branch"
 git checkout -b $INPUT_DESTINATION_HEAD_BRANCH
 git branch -u origin $INPUT_DESTINATION_HEAD_BRANCH
 echo "Adding git commit"
-git add docs/output/
+git add content/node/
 if git status | grep -q "Changes to be committed"
 then
   git commit --message "Update from https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA"
