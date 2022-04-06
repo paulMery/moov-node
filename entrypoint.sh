@@ -40,8 +40,9 @@ cp -r $INPUT_SOURCE_FOLDER "${CLONE_DIR}/${INPUT_DESTINATION_FOLDER}"
 cd "$CLONE_DIR"
 
 
-echo "Creating Branch"
-git checkout -b $INPUT_DESTINATION_HEAD_BRANCH
+echo "Creating Branch if not exist"
+git checkout $INPUT_DESTINATION_HEAD_BRANCH || git checkout -b $INPUT_DESTINATION_HEAD_BRANCH
+# git checkout -b $INPUT_DESTINATION_HEAD_BRANCH
 echo "Adding git commit"
 git add content/node/
 if git status | grep -q "Changes to be committed"
