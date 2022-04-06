@@ -24,6 +24,7 @@ else
   PULL_REQUEST_REVIEWERS='-r '$INPUT_PULL_REQUEST_REVIEWERS
 fi
 
+NODE_DIR=$(pwd)
 CLONE_DIR=$(mktemp -d)
 
 echo "Setting git variables"
@@ -42,12 +43,12 @@ git pull origin $INPUT_DESTINATION_HEAD_BRANCH || echo "New branch, no pull need
 
 echo "Copying contents to git repo"
 mkdir -p $CLONE_DIR/$INPUT_DESTINATION_FOLDER
-cp -r $INPUT_SOURCE_FOLDER "${CLONE_DIR}/${INPUT_DESTINATION_FOLDER}"
+cp -r ${NODE_DIR}/${INPUT_SOURCE_FOLDER} "${CLONE_DIR}/${INPUT_DESTINATION_FOLDER}"
 
 
 echo "Adding git commit"
 git add content/node/
-if (git status | grep -oq "content/node/")
+if git status | grep -oq "content/node/"
 then
   git commit --message "Update from https://github.com/$GITHUB_REPOSITORY/commit/$GITHUB_SHA"
   echo "Pushing git commit"
