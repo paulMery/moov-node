@@ -31,8 +31,8 @@ jobs:
           source_folder: 'docs/output/*'
           destination_repo: 'moovfinancial/docs'
           destination_folder: 'content/node'
-          user_email: 'michael.vienneau@colorado.edu'
-          user_name: 'mvienneau'
+          user_email: 'moov-bot@moov.io'
+          user_name: 'moov-bot'
           head_branch: ${{ github.head_ref }}
           pull_request_number: ${{ github.event.number }}
   
