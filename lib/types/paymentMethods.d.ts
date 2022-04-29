@@ -97,4 +97,5 @@ export type PaymentMethod = {
      */
     bankAccount?: BankAccount;
 };
+import { BankAccount } from "./bankAccountsTypedefs.js";
 //# sourceMappingURL=paymentMethods.d.ts.map

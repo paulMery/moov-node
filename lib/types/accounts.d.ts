@@ -243,16 +243,6 @@
  * @tag Accounts
  */
 /**
- * @typedef Address
- * @property {string} addressLine1
- * @property {string} addressLine2
- * @property {string} city
- * @property {string} stateOrProvince - 2 characters
- * @property {string} postalCode - 5 characters
- * @property {string} country - 2 characters
- * @tag Accounts
- */
-/**
  * Standard industry codes for businesses.
  * @typedef IndustryCodes
  * @property {string} naics
@@ -280,7 +270,7 @@
  * @typedef Responsibility
  * @property {boolean} isController
  * @property {boolean} isOwner
- * @property {integer} ownershipPercentage - Required if `isOwner` is true
+ * @property {number} ownershipPercentage - Required if `isOwner` is true
  * @property {string} jobTitle
  * @tag Accounts
  */
@@ -527,23 +517,6 @@ export type Phone = {
      */
     countryCode?: string;
 };
-export type Address = {
-    addressLine1: string;
-    addressLine2: string;
-    city: string;
-    /**
-     * - 2 characters
-     */
-    stateOrProvince: string;
-    /**
-     * - 5 characters
-     */
-    postalCode: string;
-    /**
-     * - 2 characters
-     */
-    country: string;
-};
 /**
  * Standard industry codes for businesses.
  */
@@ -591,7 +564,7 @@ export type Responsibility = {
     /**
      * - Required if `isOwner` is true
      */
-    ownershipPercentage: integer;
+    ownershipPercentage: number;
     jobTitle: string;
 };
 /**
@@ -644,4 +617,5 @@ export type AccountListCriteria = {
      */
     skip: number;
 };
+import { Address } from "./address.js";
 //# sourceMappingURL=accounts.d.ts.map
