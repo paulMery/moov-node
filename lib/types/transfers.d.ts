@@ -1,4 +1,11 @@
 /**
+ * @typedef CardDetails
+ * @type {object}
+ * @property {string} dynamicDescriptor -An optional override of the default card statement descriptor for a single transfer.
+ * @property {"recurring"|"unscheduled"|null} merchantInitiatedType - Enum: [recurring unscheduled] Describes how the card transaction was initiated
+ * @tag Cards
+ */
+/**
  * High-level account information associated with a payment method.
  * @typedef PaymentMethodAccount
  * @property {string} accountID
@@ -383,6 +390,16 @@ export class Transfers {
      */
     getRefund(transferID: string, refundID: string): Promise<Refund>;
 }
+export type CardDetails = {
+    /**
+     * -An optional override of the default card statement descriptor for a single transfer.
+     */
+    dynamicDescriptor: string;
+    /**
+     * - Enum: [recurring unscheduled] Describes how the card transaction was initiated
+     */
+    merchantInitiatedType: "recurring" | "unscheduled" | null;
+};
 /**
  * High-level account information associated with a payment method.
  */
@@ -570,4 +587,5 @@ export type AvailableTransferOptions = {
     sourceOptions: TransferOptions[];
     destinationOptions: TransferOptions[];
 };
+import { Address } from "./address.js";
 //# sourceMappingURL=transfers.d.ts.map

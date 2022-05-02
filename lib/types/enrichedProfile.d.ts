@@ -31,7 +31,7 @@
  * @property {string} city
  * @property {string} stateOrProvince
  * @property {string} postalCode
- * @property {country} country
+ * @property {string} country
  *
  * @tag Enrichment
  */
@@ -118,7 +118,7 @@ export type EnrichedProfileAddress = {
     city: string;
     stateOrProvince: string;
     postalCode: string;
-    country: country;
+    country: string;
 };
 /**
  * - Describes industry specific identifiers

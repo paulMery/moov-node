@@ -69,4 +69,6 @@ export class BankAccounts {
      */
     completeMicroDeposits(accountID: string, bankAccountID: string, amounts: Array<number>): Promise<void>;
 }
+import { BankAccountAdd } from "./bankAccountsTypedefs.js";
+import { BankAccount } from "./bankAccountsTypedefs.js";
 //# sourceMappingURL=bankAccounts.d.ts.map
