@@ -475,7 +475,7 @@ Models the reason for an ACH return or correction.
   | wallet | [Wallet](#wallet)|  |
   | card | [Card](#card)|  |
   | achDetails | [ACHDetails](#achdetails)|  |
-  | cardDetails | `CardDetails`|  |
+  | cardDetails | [CardDetails](#carddetails)|  |
 
 
 

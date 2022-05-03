@@ -484,23 +484,6 @@ Describes the individual associated with a non-business account.
 
 
 
-### Address
-
-
-
-**Properties**
-
-| Property | Type | Description |
-| ---- | ---- | ----------- |
-  | addressLine1 | `string`|  |
-  | addressLine2 | `string`|  |
-  | city | `string`|  |
-  | stateOrProvince | `string`| 2 characters |
-  | postalCode | `string`| 5 characters |
-  | country | `string`| 2 characters |
-
-
-
 ### IndustryCodes
 
 Standard industry codes for businesses.
@@ -546,7 +529,7 @@ Describes the responsibilities associated with a business representative.
 | ---- | ---- | ----------- |
   | isController | `boolean`|  |
   | isOwner | `boolean`|  |
-  | ownershipPercentage | `integer`| Required if `isOwner` is true |
+  | ownershipPercentage | `number`| Required if `isOwner` is true |
   | jobTitle | `string`|  |
 
 
@@ -616,6 +599,23 @@ Describes customer support contact information for a business account.
   | foreignID | `string`| Serves as an optional alias from a foreign/external system which can be used to reference this resource |
   | count | `number`| Optional parameter to limit the number of results in the query |
   | skip | `number`| The number of items to offset before starting to collect the result set |
+
+
+
+### Address
+
+
+
+**Properties**
+
+| Property | Type | Description |
+| ---- | ---- | ----------- |
+  | addressLine1 | `string`|  |
+  | addressLine2 | `string`|  |
+  | city | `string`|  |
+  | stateOrProvince | `string`| 2 characters |
+  | postalCode | `string`| 5 characters |
+  | country | `string`| 2 characters |
 
 
 
