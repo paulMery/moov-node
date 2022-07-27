@@ -1,6 +1,6 @@
-# Node SDK for Moov API and Dashboard
+# Node SDK for Moov API
 
-TBD
+This SDK provides convenient configurations and methods for using the Moov API in a server-side Node.js environment. 
 
 ## Installation
 
