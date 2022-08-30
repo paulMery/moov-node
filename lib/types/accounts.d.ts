@@ -412,6 +412,10 @@ export type Account = {
      */
     foreignID: string;
     /**
+     * - Describes identity verification status and relevant identity verification documents
+     */
+    verification: AccountVerification;
+    /**
      * - Displayed on credit card transactions (business only)
      */
     customerSupport: CustomerSupport | null;
@@ -573,6 +577,15 @@ export type Responsibility = {
      */
     ownershipPercentage: number;
     jobTitle: string;
+};
+/**
+ * Describes the verification state of an account
+ */
+export type AccountVerification = {
+    /**
+     * - The status of an identity verification for a profile
+     */
+    verificationStatus: "unverified" | "pending" | "resubmit" | "review" | "verified" | "failed";
 };
 /**
  * Describes customer support contact information for a business account.
