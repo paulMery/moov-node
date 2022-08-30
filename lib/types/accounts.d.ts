@@ -8,6 +8,7 @@
  * @property {Profile} profile - Details for individual or business
  * @property {object} metadata - Arbitrary key-value pairs
  * @property {string} foreignID - Optional identification or alias
+ * @property {AccountVerification} verification - Describes identity verification status and relevant identity verification documents
  * @property {CustomerSupport|null} customerSupport - Displayed on credit card transactions (business only)
  * @property {AccountSettings|null} settings - Account settings
  * @property {string} createdOn - Date account was created
@@ -275,6 +276,11 @@
  * @tag Accounts
  */
 /**
+ * Describes the verification state of an account
+ * @typedef AccountVerification
+ * @property {"unverified"|"pending"|"resubmit"|"review"|"verified"|"failed"} verificationStatus - The status of an identity verification for a profile
+ */
+/**
  * Describes customer support contact information for a business account.
  * @typedef CustomerSupport
  * @property {Phone} phone
@@ -405,6 +411,10 @@ export type Account = {
      * - Optional identification or alias
      */
     foreignID: string;
+    /**
+     * - Describes identity verification status and relevant identity verification documents
+     */
+    verification: AccountVerification;
     /**
      * - Displayed on credit card transactions (business only)
      */
@@ -567,6 +577,15 @@ export type Responsibility = {
      */
     ownershipPercentage: number;
     jobTitle: string;
+};
+/**
+ * Describes the verification state of an account
+ */
+export type AccountVerification = {
+    /**
+     * - The status of an identity verification for a profile
+     */
+    verificationStatus: "unverified" | "pending" | "resubmit" | "review" | "verified" | "failed";
 };
 /**
  * Describes customer support contact information for a business account.
