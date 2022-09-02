@@ -65,8 +65,17 @@ The following JSDoc tags should be included on any functions, methods, types, an
 
 @enum - To document Enums
 
-@private - To not include the in any public documentation for customers. 
+@private - To not include the in any public documentation for customers.
 
+## Documentation generation
+
+To generate the documentation, run
+
+```bash
+npm run docs
+```
+
+The generation logic is in `scripts/generateDocs.cjs`. We parse the raw data produced by JSDoc and then run it through a set of handlebars templates in `docs/templates`. The final output is in `docs/output`.
 
 ## Troubleshooting and support
 
