@@ -77,6 +77,8 @@ npm run docs
 
 The generation logic is in `scripts/generateDocs.cjs`. We parse the raw data produced by JSDoc and then run it through a set of handlebars templates in `docs/templates`. The final output is in `docs/output`.
 
+Handlebars "helpers" do a lot of the custom documentation generation we require for our documentation website. See the calls to `handlebars.registerHelper()` in `scripts/generateDocs.cjs` for more information.
+
 ## Troubleshooting and support
 
 TBD
